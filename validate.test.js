@@ -23,6 +23,7 @@ test("rejects bad input", () => {
   assert.throws(() => validate({ ...ok, phone: "javascript:alert(1)" }));
   assert.throws(() => validate({ ...ok, cats: [{ name: "X", items: [["Y", 1, "javascript:alert(1)"]] }] }));
   assert.throws(() => validate({ ...ok, map: "javascript:alert(1)" }));
+  assert.throws(() => validate({ ...ok, image: "https://evil.com/x.jpg" }));
   assert.throws(() => validate({ ...ok, map: "https://evil.com/maps/" }));
   assert.throws(() => validate({ ...ok, cats: [{ name: "X", cols: ["A", "B"], items: [["Y", 1]] }] }));
 });
@@ -33,10 +34,10 @@ test("editing keeps the existing id and allows an empty menu", () => {
   assert.deepEqual(v.cats, []);
 });
 
-test("keeps uploaded item images, ignores client emoji/color/cover image", () => {
+test("keeps uploaded cover and item images, ignores client emoji/color", () => {
   const url = "https://abc123.public.blob.vercel-storage.com/resimler/0b9c-4f.webp";
   const v = validate({ ...ok, image: url, emoji: "🍔", color: "#000000", cats: [{ name: "X", items: [["Y", 1, url], ["Z", 2]] }] });
-  assert.equal(v.image, undefined);
+  assert.equal(v.image, url);
   assert.equal(v.emoji, undefined);
   assert.equal(v.color, undefined);
   assert.equal(v.featured, undefined);

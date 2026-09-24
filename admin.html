@@ -25,10 +25,13 @@ legend{font-weight:600;padding:0 6px}
 label{display:grid;gap:4px;font-size:13px;font-weight:500;color:var(--muted)}
 input,textarea,select{font:inherit;color:var(--ink);background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:10px 12px;width:100%}
 input:focus,textarea:focus{outline:2px solid var(--brand);outline-offset:-1px}
+.imgpick{display:flex;gap:12px;align-items:center;margin-top:12px}
+.imgpick img{width:120px;height:72px;object-fit:cover;border-radius:12px;background:var(--surface-2);border:1px solid var(--line)}
+.imgpick img:not([src]){visibility:hidden}
 .iimg{flex:0 0 40px;width:40px;height:40px;padding:0;border-radius:10px;overflow:hidden;position:relative;font-size:16px}
 .iimg img{width:100%;height:100%;object-fit:cover;display:block}
 .iimg .x{position:absolute;top:0;right:0;background:rgb(0 0 0/.65);color:#fff;font-size:11px;line-height:1;padding:2px 4px;border-bottom-left-radius:6px}
-.iimg.busy{opacity:.5;pointer-events:none}
+.iimg.busy,.imgpick.busy{opacity:.5;pointer-events:none}
 .star-tag{color:#f5a524;font-weight:700}
 textarea{min-height:120px;font-family:ui-monospace,Menlo,monospace;font-size:13px}
 .row{display:flex;gap:8px;align-items:center}
@@ -101,6 +104,15 @@ button.link{border:0;background:none;color:var(--no);padding:4px;font-weight:500
         <label>Kapanış <input name="close" type="time" value="23:00"></label>
       </div>
       <label class="check" style="margin-top:10px"><input type="checkbox" name="noHours"> Çalışma saati bilinmiyor</label>
+      <div class="imgpick" id="coverPick">
+        <img id="coverImg" alt="Kapak fotoğrafı önizleme">
+        <div class="row" style="flex-wrap:wrap">
+          <button type="button" id="coverBtn">Kapak fotoğrafı seç</button>
+          <button type="button" class="link" id="coverDel" hidden>Fotoğrafı kaldır</button>
+        </div>
+        <input type="hidden" name="image">
+      </div>
+      <p class="hint" style="margin:6px 0 0">İsteğe bağlı. Fotoğraf yoksa kart, otomatik atanan renkle gösterilir.</p>
       <label class="check" style="margin-top:12px"><input type="checkbox" name="featured"> ⭐ Öne çıkar (ana sayfada en üstte gösterilir)</label>
       <label style="margin-top:12px">Not <textarea name="note" maxlength="300" style="min-height:60px;font-family:inherit" placeholder="Ör. Öğrenci kartıyla %10 indirim"></textarea></label>
     </fieldset>
@@ -210,6 +222,14 @@ function pickImage(maxSide, busyEl, done) {
 }
 
 
+function setCover(url) {
+  f.elements.image.value = url;
+  url ? $("#coverImg").src = url : $("#coverImg").removeAttribute("src");
+  $("#coverDel").hidden = !url;
+}
+$("#coverBtn").onclick = () => pickImage(1200, $("#coverPick"), setCover);
+$("#coverDel").onclick = () => setCover("");
+
 function priceInput() {
   const el = document.createElement("input");
   Object.assign(el, {className: "iprice", type: "number", min: 0, step: "0.01", inputMode: "decimal"});
@@ -290,7 +310,7 @@ function fill(m) {
   editingId = m.id;
   const el = f.elements;
   el.name.value = m.name; el.type.value = m.type; el.map.value = m.map || "";
-  el.phone.value = m.phoneText || m.phone || ""; el.featured.checked = !!m.featured;
+  el.phone.value = m.phoneText || m.phone || ""; el.featured.checked = !!m.featured; setCover(m.image || "");
   el.note.value = m.note || "";
   el.noHours.checked = !m.hours;
   [el.open.value, el.close.value] = m.hours ? m.hours.split("-") : ["11:00", "23:00"];
@@ -310,7 +330,7 @@ function fill(m) {
 
 function resetForm() {
   editingId = null;
-  f.reset(); $("#cats").innerHTML = ""; addCat();
+  f.reset(); setCover(""); $("#cats").innerHTML = ""; addCat();
   f.open.disabled = f.close.disabled = false;
   $("#formTitle").textContent = "Yeni esnaf";
   $("#cancel").hidden = true;
@@ -367,7 +387,7 @@ f.onsubmit = async e => {
   try {
     body = {
       name: f.elements.name.value, type: f.elements.type.value, map: f.elements.map.value.trim(),
-      featured: f.elements.featured.checked, note: f.note.value.trim(),
+      image: f.elements.image.value, featured: f.elements.featured.checked, note: f.note.value.trim(),
       hours: f.noHours.checked ? null : `${f.open.value}-${f.close.value}`,
       phone: toE164(f.phone.value), phoneText: f.phone.value.trim(),
       cats: parseCats(),

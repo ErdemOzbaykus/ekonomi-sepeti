@@ -4,7 +4,8 @@ import { guard, redis } from "../lib/admin.js";
 // All vendors live in one Redis hash: id -> vendor object. esnaflar.json only seeds it once.
 const KEY = "esnaflar", SEEDED = "esnaflar:seeded";
 // Card color; picked once when a vendor is added and kept on edits.
-const COLORS = ["#fff0c2", "#ffdcd0", "#f7d9d9", "#e3f1dc", "#f3e3d3", "#ecdff7", "#fde2d2", "#fbe8c8", "#d9ecf7", "#f9d9e0", "#dcefe9", "#fbd9c4"];
+// 12 hues 30° apart (oklch L .92 C .055), so cards stay distinguishable in the vivid dark theme too.
+export const COLORS = ["#ffd7d5", "#ffdbc5", "#f8e1bc", "#e6e8bf", "#d2eecc", "#c1f1df", "#baf0f3", "#c0ecff", "#d0e6ff", "#e3dfff", "#f6d9fc", "#ffd6ea"];
 
 async function all(r) {
   if (await r.set(SEEDED, 1, { nx: true })) await r.hset(KEY, Object.fromEntries(seed.map(m => [m.id, m])));
@@ -99,6 +100,7 @@ export function validate(b, id = null) {
     id: id || `${slug || "esnaf"}-${Date.now().toString(36)}`,
     name,
     type: str(b.type, "Tür", 40),
+    ...(img(b.image) && { image: img(b.image) }),
     ...(b.featured === true && { featured: true }),
     hours,
     ...(phone && { phone, phoneText: str(b.phoneText, "Telefon yazımı", 25, { optional: true }) || phone }),

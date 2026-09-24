@@ -27,7 +27,7 @@
   },
   "name": "Battalzade",
   "type": "Çiğ Köfte",
-  "color": "#f7d9d9",
+  "color": "#f6d9fc",
   "hours": "13:45-00:30",
   "cats": [
    {
@@ -180,7 +180,7 @@
   },
   "name": "Komagene",
   "type": "Çiğ Köfte",
-  "color": "#f7d9d9",
+  "color": "#e3dfff",
   "hours": "11:00-23:30",
   "note": "Pazar günleri siparişe kapalı görünüyor.",
   "cats": [
@@ -245,7 +245,7 @@
   "id": "bufe-bambam",
   "name": "Büfe Bambam",
   "type": "Tost & Büfe",
-  "color": "#fff0c2",
+  "color": "#ffdbc5",
   "hours": "10:00-14:00",
   "note": "Sipariş saatleri platformda kısa görünüyor; dükkân saatleri farklı olabilir.",
   "cats": [
@@ -367,7 +367,7 @@
   },
   "name": "Burger Republic",
   "type": "Burger",
-  "color": "#ffdcd0",
+  "color": "#d0e6ff",
   "hours": "10:00-01:45",
   "cats": [
    {
@@ -566,7 +566,7 @@
   "id": "chef-pilav",
   "name": "Chef Pilav",
   "type": "Pilav",
-  "color": "#fbe8c8",
+  "color": "#ffd6ea",
   "hours": "20:00-05:00",
   "note": "Gece açık: 20:00'den sabah 05:00'e kadar.",
   "cats": [
@@ -630,7 +630,7 @@
   },
   "name": "Cafe Bambam",
   "type": "Kafe",
-  "color": "#fff0c2",
+  "color": "#baf0f3",
   "hours": "09:00-18:00",
   "cats": [
    {
@@ -812,7 +812,7 @@
   },
   "name": "Akyüz Döner",
   "type": "Döner & Burger",
-  "color": "#ffe4c7",
+  "color": "#c1f1df",
   "hours": "11:00-23:00",
   "note": "İşletme sahibi Google'da telefonla sipariş verilmesini öneriyor. Salı günleri kapalı görünüyor.",
   "cats": [
@@ -992,7 +992,7 @@
   },
   "name": "Gusto Makarna & Salata",
   "type": "Makarna",
-  "color": "#fde2d2",
+  "color": "#d2eecc",
   "hours": "12:00-23:45",
   "cats": [
    {
@@ -1181,7 +1181,7 @@
   "id": "sosyete",
   "name": "Sosyete Tavuk Dürüm",
   "type": "Döner & Burger",
-  "color": "#ffe4c7",
+  "color": "#e6e8bf",
   "hours": "11:00-04:00",
   "note": "Gece 04:00'e kadar açık.",
   "cats": [
@@ -1290,7 +1290,7 @@
   "id": "munzur-tavuk",
   "name": "Munzur Tavuk",
   "type": "Izgara",
-  "color": "#fde2c8",
+  "color": "#ffd7d5",
   "hours": "11:00-02:45",
   "cats": [
    {
@@ -1427,7 +1427,7 @@
   "id": "vip-mutfak",
   "name": "Vip Mutfak Ev Yemekleri",
   "type": "Ev Yemeği",
-  "color": "#e3f1dc",
+  "color": "#ffdbc5",
   "hours": "11:30-03:00",
   "cats": [
    {
@@ -1577,7 +1577,7 @@
   "id": "korele",
   "name": "Korele",
   "type": "Uzak Doğu",
-  "color": "#f9d9e0",
+  "color": "#f8e1bc",
   "hours": "11:30-03:00",
   "cats": [
    {
@@ -1808,7 +1808,7 @@
   },
   "name": "Bizim Kokoreç (Bilal Usta'nın Yeri)",
   "type": "Kokoreç",
-  "color": "#fbd9c4",
+  "color": "#e6e8bf",
   "hours": null,
   "note": "Menüsü internette yok. Kokoreç, Ödemiş köfte (pişmiş veya çiğ) ve tavuk sote var; fiyat için arayın.",
   "cats": []
@@ -1841,7 +1841,7 @@
   },
   "name": "Yummy Waffle",
   "type": "Tatlı",
-  "color": "#ecdff7",
+  "color": "#baf0f3",
   "hours": "14:00-02:00",
   "cats": [
    {
@@ -1957,7 +1957,7 @@
   },
   "name": "Adil Müftüoğlu Uğur Lokantası",
   "type": "Ev Yemeği",
-  "color": "#e3f1dc",
+  "color": "#ffd7d5",
   "hours": "11:30-21:30",
   "cats": [
    {
@@ -2230,7 +2230,7 @@
   },
   "name": "Mamosa",
   "type": "Döner & Burger",
-  "color": "#ffe4c7",
+  "color": "#c0ecff",
   "hours": "11:00-22:00",
   "cats": [
    {
@@ -2509,7 +2509,7 @@
   "id": "tezgahtar",
   "name": "Tezgahtar",
   "type": "Tost & Büfe",
-  "color": "#fff0c2",
+  "color": "#d0e6ff",
   "hours": "08:30-22:00",
   "cats": [
    {
@@ -2646,7 +2646,7 @@
   },
   "name": "Pavo Coffee Co",
   "type": "Kafe",
-  "color": "#f3e3d3",
+  "color": "#f6d9fc",
   "hours": "09:30-22:45",
   "note": "Pazar 10:30'da açılıyor.",
   "cats": [
@@ -2810,7 +2810,7 @@
   },
   "name": "Özsüt",
   "type": "Kafe",
-  "color": "#ecdff7",
+  "color": "#c1f1df",
   "hours": "09:00-23:45",
   "cats": [
    {
