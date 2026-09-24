@@ -44,3 +44,16 @@ test("keeps uploaded item images, ignores client emoji/color/cover image", () =>
   assert.equal(validate({ ...ok, featured: "yes" }).featured, undefined);
   assert.deepEqual(v.cats[0].items, [["Y", 1, url], ["Z", 2]]);
 });
+
+test("maps a Places API response to our google shape, newest review first", async () => {
+  const { toGoogle } = await import("./api/yorumlar.js");
+  const g = toGoogle({
+    rating: 4.4, userRatingCount: 120,
+    reviews: [
+      { rating: 3, text: { text: "eski" }, relativePublishTimeDescription: "2 ay önce", publishTime: "2026-07-01T00:00:00Z", authorAttribution: { displayName: "A" } },
+      { rating: 5, text: { text: "yeni" }, relativePublishTimeDescription: "3 gün önce", publishTime: "2026-09-21T00:00:00Z", authorAttribution: { displayName: "B" } },
+      { rating: 4, relativePublishTimeDescription: "1 gün önce", publishTime: "2026-09-23T00:00:00Z" }, // star-only, no text
+    ],
+  }, "https://fallback");
+  assert.deepEqual(g, { rating: 4.4, count: 120, url: "https://fallback", reviews: [[5, "yeni", "3 gün önce", "B"], [3, "eski", "2 ay önce", "A"]] });
+});
