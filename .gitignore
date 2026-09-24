@@ -1,0 +1,9 @@
+node_modules
+.vercel
+.env*
+
+# local AI-tool files, not part of the site
+.agents
+.claude
+.remember
+skills-lock.json

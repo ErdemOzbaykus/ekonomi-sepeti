@@ -1,0 +1,12 @@
+{
+  "name": "ekonomi-sepeti",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.35.0",
+    "@vercel/blob": "^2.8.0"
+  }
+}

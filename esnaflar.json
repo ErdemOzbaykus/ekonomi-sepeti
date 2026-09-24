@@ -1,0 +1,2935 @@
+[
+ {
+  "id": "battalzade",
+  "phone": "+905342972670",
+  "phoneText": "0534 297 26 70",
+  "google": {
+   "rating": 4.3,
+   "count": null,
+   "url": "https://www.google.com/maps/place/?q=place_id:ChIJt62WZD99uRQRc2LsMolvEF4",
+   "reviews": [
+    [
+     1,
+     "Sipariş verdim 2 saat boyunca gelmedi sonrasında iptal ettim. Kötü bir deneyim.",
+     "8 ay önce"
+    ],
+    [
+     5,
+     "Güler yüzlü hizmet hızlı servis lezzet harika herşeyi cok bol koyuyorlar.",
+     "6 ay önce"
+    ],
+    [
+     5,
+     "Gerçek çiğköfte yemek isteyen buraya gelsin gerçekten tadı çok iyi, işletmecileri çok içten ve candan 👌",
+     "2 yıl önce"
+    ]
+   ]
+  },
+  "name": "Battalzade",
+  "type": "Çiğ Köfte",
+  "color": "#f7d9d9",
+  "hours": "13:45-00:30",
+  "cats": [
+   {
+    "name": "Dürümler",
+    "items": [
+     [
+      "100 gr Çiğ Köfte Dürüm",
+      170
+     ],
+     [
+      "Dortoslu Çiğ Köfte Dürüm",
+      220
+     ],
+     [
+      "Mega Çiğ Köfte Dürüm (180 gr)",
+      240
+     ],
+     [
+      "210 gr Ultra Mega",
+      280
+     ],
+     [
+      "Zurna Dürüm",
+      280
+     ],
+     [
+      "Schnitzelli Dürüm",
+      290
+     ],
+     [
+      "Sushi Çiğ Köfte (210 gr)",
+      340
+     ]
+    ]
+   },
+   {
+    "name": "Kiloluk & Porsiyon",
+    "items": [
+     [
+      "Çiğ Köfte (250 gr)",
+      275
+     ],
+     [
+      "Çiğ Köfte (500 gr, garnitürsüz)",
+      350
+     ],
+     [
+      "Çiğ Köfte (500 gr)",
+      475
+     ],
+     [
+      "Çiğ Köfte (750 gr)",
+      650
+     ],
+     [
+      "Çiğ Köfte (1 kg, garnitürsüz)",
+      650
+     ],
+     [
+      "Çiğ Köfte (1 kg)",
+      850
+     ]
+    ]
+   },
+   {
+    "name": "Pilav & Ekmek Arası",
+    "items": [
+     [
+      "Sade Pilav",
+      125
+     ],
+     [
+      "Tavuklu Pilav",
+      185
+     ],
+     [
+      "Tavuklu Pilav (Double)",
+      345
+     ],
+     [
+      "Patso",
+      145
+     ]
+    ]
+   },
+   {
+    "name": "İçecekler",
+    "items": [
+     [
+      "Su (50 cl)",
+      25
+     ],
+     [
+      "Ayran (17,5 cl)",
+      42
+     ],
+     [
+      "Niğde Gazozu",
+      55
+     ],
+     [
+      "Şalgam (30 cl)",
+      59
+     ],
+     [
+      "Pepsi (33 cl)",
+      89
+     ],
+     [
+      "Şalgam (1 L)",
+      125
+     ],
+     [
+      "Pepsi (1 L)",
+      125
+     ],
+     [
+      "Ayran (1 L)",
+      139
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "komagene",
+  "phone": "+908503770850",
+  "phoneText": "0850 377 08 50",
+  "google": {
+   "rating": 4.1,
+   "count": null,
+   "url": "https://www.google.com/maps/place/?q=place_id:ChIJ7-6bR9HduxQRa28SIO2-0MM",
+   "reviews": [
+    [
+     1,
+     "Yani dükkana ilk girdiğimiz andan beri çalışanların yüzü 5 karıştı ve sipariş verirken çok modsuzlardı yani normalde dükkandan sipariş edilen menüyü…",
+     "1 ay önce"
+    ],
+    [
+     1,
+     "Yemek sepeti üzerinden ne zaman sipariş versem en yakın diye buraya yönlendiriliyor. Her zaman 5-20 dakika tahmini teslimat süresi fakat her zaman…",
+     "1 ay önce"
+    ],
+    [
+     1,
+     "Bugun sipariş verdim telefondali bayan ilgisiz geri dönüş yapılmadı siparişim parçalanmış içi boş ve istediğim malzemelerin hiçbiri yoktu sadece…",
+     "1 ay önce"
+    ]
+   ]
+  },
+  "name": "Komagene",
+  "type": "Çiğ Köfte",
+  "color": "#f7d9d9",
+  "hours": "11:00-23:30",
+  "note": "Pazar günleri siparişe kapalı görünüyor.",
+  "cats": [
+   {
+    "name": "Dürümler",
+    "items": [
+     [
+      "Çiğ Köfte Dürüm",
+      120
+     ],
+     [
+      "Mega Çiğ Köfte Dürüm",
+      135
+     ],
+     [
+      "Doritos'lu Double Dürüm",
+      190
+     ]
+    ]
+   },
+   {
+    "name": "Menüler",
+    "items": [
+     [
+      "Double Dürüm Menü",
+      200
+     ],
+     [
+      "Mega Doy! Menü",
+      350
+     ],
+     [
+      "Bi'Çift Tatlı Menü",
+      460
+     ],
+     [
+      "Aile Menü 1",
+      820
+     ]
+    ]
+   },
+   {
+    "name": "Çiğ Köfte",
+    "items": [
+     [
+      "Çiğ Köfte (200 gr)",
+      200
+     ],
+     [
+      "Çiğ Köfte (400 gr)",
+      350
+     ],
+     [
+      "Çiğ Köfte (600 gr)",
+      475
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "bufe-bambam",
+  "name": "Büfe Bambam",
+  "type": "Tost & Büfe",
+  "color": "#fff0c2",
+  "hours": "10:00-14:00",
+  "note": "Sipariş saatleri platformda kısa görünüyor; dükkân saatleri farklı olabilir.",
+  "cats": [
+   {
+    "name": "Tostlar",
+    "items": [
+     [
+      "Simit Tost",
+      120
+     ],
+     [
+      "Bambam Tost",
+      160
+     ],
+     [
+      "Kaşarlı Tost",
+      165
+     ],
+     [
+      "Sucuklu Kaşarlı Tost",
+      195
+     ],
+     [
+      "Karışık Tost",
+      210
+     ]
+    ]
+   },
+   {
+    "name": "Sandviç & Menü",
+    "items": [
+     [
+      "Patso Sandviç",
+      165
+     ],
+     [
+      "Sosisli Patso Sandviç",
+      175
+     ],
+     [
+      "İçli Köfte Menü (3 adet + ayran)",
+      200
+     ]
+    ]
+   },
+   {
+    "name": "Yan Ürünler",
+    "items": [
+     [
+      "Patates Kızartması",
+      130
+     ],
+     [
+      "Double Patates Kızartması",
+      160
+     ]
+    ]
+   },
+   {
+    "name": "İçecekler",
+    "items": [
+     [
+      "Su (50 cl)",
+      20
+     ],
+     [
+      "Soda",
+      27
+     ],
+     [
+      "Ayran (20 cl)",
+      30
+     ],
+     [
+      "Meyveli Soda",
+      35
+     ],
+     [
+      "Fanta (20 cl)",
+      45
+     ],
+     [
+      "Ayran (30 cl)",
+      55
+     ],
+     [
+      "Fanta (33 cl)",
+      80
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "burger-republic",
+  "phone": "+905401253500",
+  "phoneText": "0540 125 35 00",
+  "google": {
+   "rating": 4.9,
+   "count": 115,
+   "url": "https://www.google.com/maps/place/?q=place_id:ChIJ1Z8lrzTduxQRvfbPC9mV3Q4",
+   "reviews": [
+    [
+     5,
+     "Hizmeti iyi ve çalışanları çok ilgili ve güler yüzlüydü Eti taze ve suluydu ve fiyatı çok uygun gelmenizi tavsiye ederim..",
+     "3 ay önce"
+    ],
+    [
+     5,
+     "Alaçatı’daki lezzetin aynısı buraya gelmiş. Açılış günü yemekler harikaydı. İşiniz rast gitsin.",
+     "3 ay önce"
+    ],
+    [
+     5,
+     "Gerçekten lezizdi, açılışa özel kampa yapmışlar ondan denedik fiyat performans olarak çok çok iyi kampanya var diye malzemeden kısmamışlar.",
+     "3 ay önce"
+    ]
+   ]
+  },
+  "name": "Burger Republic",
+  "type": "Burger",
+  "color": "#ffdcd0",
+  "hours": "10:00-01:45",
+  "cats": [
+   {
+    "name": "Burgerler",
+    "cols": [
+     "Tek",
+     "Double"
+    ],
+    "items": [
+     [
+      "Tavuk Burger",
+      340,
+      -1
+     ],
+     [
+      "BBQ Chicken Burger",
+      350,
+      -1
+     ],
+     [
+      "Sebze Burger",
+      350,
+      -1
+     ],
+     [
+      "Cheeseburger",
+      365,
+      455
+     ],
+     [
+      "Muhteşem 4 Peynirli",
+      390,
+      480
+     ],
+     [
+      "Alaska Beğendi",
+      390,
+      480
+     ],
+     [
+      "3 Mantarlı Burger",
+      390,
+      -1
+     ],
+     [
+      "Republic's Star",
+      400,
+      490
+     ],
+     [
+      "French Kiss",
+      405,
+      495
+     ],
+     [
+      "Alaturka",
+      405,
+      495
+     ],
+     [
+      "Teksas Füme",
+      410,
+      500
+     ],
+     [
+      "Kavurma Burger",
+      430,
+      520
+     ],
+     [
+      "Steak Burger",
+      455,
+      545
+     ]
+    ]
+   },
+   {
+    "name": "Menüler",
+    "items": [
+     [
+      "Avantajlı Classic Cheese Burger Menü",
+      540
+     ],
+     [
+      "Duo Tavuk Burger Menü",
+      980
+     ],
+     [
+      "2'li Efsane Menü",
+      1070
+     ]
+    ]
+   },
+   {
+    "name": "Sokak Lezzetleri",
+    "items": [
+     [
+      "Çıtır Tavuklu Wrap",
+      290
+     ],
+     [
+      "Taco (2 adet)",
+      315
+     ],
+     [
+      "Bazlama Tost",
+      315
+     ],
+     [
+      "Meksika Tavuklu Quesadilla",
+      330
+     ],
+     [
+      "Goralı Hot Dog",
+      360
+     ],
+     [
+      "Buffalo Hot Dog",
+      385
+     ]
+    ]
+   },
+   {
+    "name": "Yan Ürünler",
+    "items": [
+     [
+      "Soğan Halkası",
+      100
+     ],
+     [
+      "Patates (Küçük)",
+      100
+     ],
+     [
+      "Mozzarella Stick (6)",
+      120
+     ],
+     [
+      "Patates (Orta)",
+      130
+     ],
+     [
+      "Patates (Büyük)",
+      160
+     ],
+     [
+      "Churros Patates",
+      160
+     ],
+     [
+      "Çıtır Tavuk",
+      285
+     ],
+     [
+      "Füme Kaburgalı Cheddarlı Patates",
+      285
+     ],
+     [
+      "Republic Köfte",
+      340
+     ],
+     [
+      "Çıtır Kanat (6)",
+      360
+     ]
+    ]
+   },
+   {
+    "name": "İçecekler",
+    "items": [
+     [
+      "Su (50 cl)",
+      25
+     ],
+     [
+      "Soda",
+      50
+     ],
+     [
+      "Ayran (30 cl)",
+      60
+     ],
+     [
+      "Kola / Fanta / Sprite (33 cl)",
+      85
+     ],
+     [
+      "Cappy / Fuse Tea (33 cl)",
+      85
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "chef-pilav",
+  "name": "Chef Pilav",
+  "type": "Pilav",
+  "color": "#fbe8c8",
+  "hours": "20:00-05:00",
+  "note": "Gece açık: 20:00'den sabah 05:00'e kadar.",
+  "cats": [
+   {
+    "name": "Pilavlar",
+    "cols": [
+     "Tek",
+     "1,5"
+    ],
+    "items": [
+     [
+      "Sade Pilav",
+      270,
+      300
+     ],
+     [
+      "Tavuklu Pilav",
+      400,
+      500
+     ]
+    ]
+   },
+   {
+    "name": "İçecekler",
+    "items": [
+     [
+      "Ayran (17 cl)",
+      50
+     ],
+     [
+      "Ayran (30 cl)",
+      60
+     ],
+     [
+      "Kola / Fanta / Sprite (33 cl)",
+      100
+     ],
+     [
+      "Ayran (1 L)",
+      110
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "cafe-bambam",
+  "phone": "+905524637346",
+  "phoneText": "0552 463 73 46",
+  "google": {
+   "rating": 4.7,
+   "count": 14,
+   "url": "https://www.google.com/maps/place/?q=place_id:ChIJEacFQmDduxQRXReZT2ICEz8",
+   "reviews": [
+    [
+     5,
+     "Cute, clean cafe with a varied menu. The owners are sweet and helpful; even though we don’t speak Turkish they were very patient…",
+     "2 yıl önce"
+    ]
+   ]
+  },
+  "name": "Cafe Bambam",
+  "type": "Kafe",
+  "color": "#fff0c2",
+  "hours": "09:00-18:00",
+  "cats": [
+   {
+    "name": "Tostlar",
+    "items": [
+     [
+      "Hey Senin Tostun",
+      100
+     ],
+     [
+      "Simit Tost",
+      130
+     ],
+     [
+      "Anne Tostu",
+      150
+     ],
+     [
+      "Bambam Tost",
+      170
+     ],
+     [
+      "Kaşarlı Tost",
+      170
+     ],
+     [
+      "Karışık Tost",
+      210
+     ],
+     [
+      "Özel Yumurtalı Tost",
+      230
+     ],
+     [
+      "Ayvalık Tost",
+      420
+     ]
+    ]
+   },
+   {
+    "name": "Kahvaltı",
+    "items": [
+     [
+      "Menemen",
+      170
+     ],
+     [
+      "Kaşarlı Menemen",
+      200
+     ],
+     [
+      "Hızlı Kahvaltı",
+      280
+     ]
+    ]
+   },
+   {
+    "name": "Gözlemeler",
+    "items": [
+     [
+      "Domatesli",
+      200
+     ],
+     [
+      "Sucuk Kaşarlı",
+      215
+     ],
+     [
+      "Patatesli",
+      220
+     ],
+     [
+      "Peynirli",
+      225
+     ],
+     [
+      "Kaşarlı",
+      245
+     ],
+     [
+      "Karışık",
+      275
+     ]
+    ]
+   },
+   {
+    "name": "Makarna & Mantı",
+    "items": [
+     [
+      "Bambam Soslu Makarna",
+      165
+     ],
+     [
+      "Napoliten Makarna",
+      170
+     ],
+     [
+      "Yoğurtlu Makarna",
+      170
+     ],
+     [
+      "Mantı",
+      350
+     ]
+    ]
+   },
+   {
+    "name": "Ekmek Arası & Yan",
+    "items": [
+     [
+      "İçli Köfte",
+      75
+     ],
+     [
+      "Patates Kızartması",
+      110
+     ],
+     [
+      "Patso",
+      130
+     ],
+     [
+      "Sosisli Patso",
+      150
+     ],
+     [
+      "Sucuk",
+      150
+     ],
+     [
+      "Kasap Sucuk",
+      160
+     ]
+    ]
+   },
+   {
+    "name": "İçecekler",
+    "items": [
+     [
+      "Su",
+      20
+     ],
+     [
+      "Soda",
+      20
+     ],
+     [
+      "Kola",
+      65
+     ],
+     [
+      "Fanta (33 cl)",
+      80
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "akyuz-doner",
+  "phone": "+905314260347",
+  "phoneText": "0531 426 03 47",
+  "google": {
+   "rating": 3.8,
+   "count": 26,
+   "url": "https://www.google.com/maps/place/?q=place_id:ChIJLV1R2xHduxQRTbbkVTji-uw",
+   "reviews": [
+    [
+     5,
+     "Şimdiye kadar yediğim en lezzetli tavuk döner hijyen süper içim rahat hergün ordan yiyorum sipariş çabuk geliyor teşekkürler",
+     "1 yıl önce"
+    ],
+    [
+     1,
+     "Sipariş veriyoruz internetten 1 saat geçtikten sonra iptal ediyolar aradığımızda yolda olduğunu söylüyorlar…",
+     "7 ay önce"
+    ]
+   ]
+  },
+  "name": "Akyüz Döner",
+  "type": "Döner & Burger",
+  "color": "#ffe4c7",
+  "hours": "11:00-23:00",
+  "note": "İşletme sahibi Google'da telefonla sipariş verilmesini öneriyor. Salı günleri kapalı görünüyor.",
+  "cats": [
+   {
+    "name": "Tavuk Döner",
+    "items": [
+     [
+      "Yarım Ekmek Tavuk Döner",
+      199.9
+     ],
+     [
+      "Hatay Usulü Dürüm",
+      199.9
+     ],
+     [
+      "3/4 Ekmek Tavuk Döner",
+      279.9
+     ],
+     [
+      "Bazuka Dürüm",
+      279.9
+     ],
+     [
+      "Hatay Usulü Mega Dürüm",
+      279.9
+     ],
+     [
+      "Mega Dürüm",
+      289.9
+     ],
+     [
+      "Tavuk Döner Beyti",
+      289.9
+     ],
+     [
+      "İskender (Tavuk)",
+      299.9
+     ],
+     [
+      "Pilav Üstü Tavuk Döner",
+      299.9
+     ]
+    ]
+   },
+   {
+    "name": "Kokoreç",
+    "items": [
+     [
+      "Yarım Ekmek",
+      245
+     ],
+     [
+      "3/4 Ekmek",
+      355
+     ],
+     [
+      "Tam Ekmek",
+      445
+     ]
+    ]
+   },
+   {
+    "name": "Köfte & Kebap",
+    "items": [
+     [
+      "Yarım Ekmek Köfte",
+      229.9
+     ],
+     [
+      "Adana Dürüm",
+      239.9
+     ],
+     [
+      "3/4 Ekmek Köfte",
+      299.9
+     ],
+     [
+      "Adana Kebap",
+      379
+     ],
+     [
+      "Izgara Köfte",
+      389
+     ]
+    ]
+   },
+   {
+    "name": "Menüler",
+    "items": [
+     [
+      "Cheddarlı Tavuk Dürüm Menü",
+      369.9
+     ],
+     [
+      "2'li Tavuk Döner Dürüm",
+      379.9
+     ],
+     [
+      "Çıtır Hatay Menü",
+      379.9
+     ],
+     [
+      "Kaşarlı Köfte Menü",
+      389.9
+     ],
+     [
+      "Kaşarlı Duble Adana Dürüm",
+      489.9
+     ],
+     [
+      "4'lü Öğrenci Menü",
+      780
+     ],
+     [
+      "Aile Menüsü",
+      799
+     ]
+    ]
+   },
+   {
+    "name": "Yan Ürünler & İçecek",
+    "items": [
+     [
+      "Ayran (20 cl)",
+      40
+     ],
+     [
+      "Sprite (33 cl)",
+      48
+     ],
+     [
+      "Pepsi / Şalgam",
+      55
+     ],
+     [
+      "Sade Pilav",
+      90
+     ],
+     [
+      "Nugget (4)",
+      112
+     ],
+     [
+      "Soğan Halkası (4)",
+      112
+     ],
+     [
+      "Patates (Küçük)",
+      129.9
+     ],
+     [
+      "Patates (Büyük)",
+      159.9
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "gusto",
+  "google": {
+   "rating": 4.1,
+   "count": 7,
+   "url": "https://www.google.com/maps/place/?q=place_id:ChIJ5djCkTjcuxQRPvpFR_5637w",
+   "reviews": [
+    [
+     5,
+     "Porsiyonu çok doyurucu, çok lezzetli, sosu bol. Mutlaka yemenizi tavsiye ederim.",
+     "1 yıl önce"
+    ],
+    [
+     1,
+     "Dükkanın sürekli kapalı olması haricinde herşey çok iyi",
+     "8 ay önce"
+    ]
+   ]
+  },
+  "name": "Gusto Makarna & Salata",
+  "type": "Makarna",
+  "color": "#fde2d2",
+  "hours": "12:00-23:45",
+  "cats": [
+   {
+    "name": "Makarnalar",
+    "items": [
+     [
+      "Sade",
+      245
+     ],
+     [
+      "Tavuklu Sade",
+      275
+     ],
+     [
+      "Arrabbiata",
+      315
+     ],
+     [
+      "Pomodoro",
+      325
+     ],
+     [
+      "Napoliten",
+      325
+     ],
+     [
+      "Hadid",
+      325
+     ],
+     [
+      "Sweet Chilli",
+      325
+     ],
+     [
+      "Meksika Soslu",
+      335
+     ],
+     [
+      "Köri Soslu",
+      335
+     ],
+     [
+      "Kaşarlı Mantarlı",
+      335
+     ],
+     [
+      "Café de Paris",
+      335
+     ],
+     [
+      "Sosisli Pomodoro",
+      340
+     ],
+     [
+      "Soya Soslu Sebzeli",
+      345
+     ],
+     [
+      "Cheddar Soslu",
+      350
+     ],
+     [
+      "Pollo",
+      355
+     ],
+     [
+      "Köri Soslu Tavuklu",
+      355
+     ],
+     [
+      "Akdeniz",
+      365
+     ],
+     [
+      "Mantarlı Pesto",
+      365
+     ],
+     [
+      "Alfredo",
+      370
+     ],
+     [
+      "Mac & Cheese",
+      370
+     ],
+     [
+      "Kremalı Tavuklu",
+      370
+     ],
+     [
+      "Tavuklu Pesto",
+      380
+     ],
+     [
+      "Tavuklu Mac & Cheese",
+      390
+     ],
+     [
+      "Ton Balıklı",
+      400
+     ],
+     [
+      "Bolognese",
+      430
+     ]
+    ]
+   },
+   {
+    "name": "Mantı & Salata",
+    "items": [
+     [
+      "Mantı",
+      335
+     ],
+     [
+      "Akdeniz Salata",
+      340
+     ],
+     [
+      "Hellimli Salata",
+      355
+     ],
+     [
+      "Tavuklu Salata",
+      355
+     ],
+     [
+      "Ton Balıklı Salata",
+      375
+     ]
+    ]
+   },
+   {
+    "name": "Tatlılar",
+    "items": [
+     [
+      "Vanilyalı",
+      220
+     ],
+     [
+      "Çikolatalı",
+      230
+     ],
+     [
+      "Vişneli",
+      250
+     ],
+     [
+      "Çikolatalı Vişneli",
+      260
+     ]
+    ]
+   },
+   {
+    "name": "Yan & İçecek",
+    "items": [
+     [
+      "Galeta",
+      15
+     ],
+     [
+      "Su",
+      35
+     ],
+     [
+      "Sade Yoğurt",
+      60
+     ],
+     [
+      "Sarımsaklı Yoğurt",
+      65
+     ],
+     [
+      "Soda",
+      60
+     ],
+     [
+      "Kutu İçecekler",
+      85
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "sosyete",
+  "name": "Sosyete Tavuk Dürüm",
+  "type": "Döner & Burger",
+  "color": "#ffe4c7",
+  "hours": "11:00-04:00",
+  "note": "Gece 04:00'e kadar açık.",
+  "cats": [
+   {
+    "name": "Tavuk Döner",
+    "items": [
+     [
+      "Tavuk Döner Dürüm",
+      230
+     ],
+     [
+      "Çift Lavaş Dürüm",
+      230
+     ],
+     [
+      "Yarım Ekmek Tavuk Döner",
+      230
+     ],
+     [
+      "3/4 Ekmek Tavuk Döner",
+      330
+     ],
+     [
+      "Mega Dürüm",
+      360
+     ],
+     [
+      "Sosyete Pilav Üstü Döner",
+      400
+     ],
+     [
+      "Bazuka Dürüm",
+      450
+     ],
+     [
+      "Pilav Üstü Döner (Double)",
+      550
+     ]
+    ]
+   },
+   {
+    "name": "Menüler (içecekli)",
+    "items": [
+     [
+      "Dürüm Menü",
+      275
+     ],
+     [
+      "Çift Lavaş Dürüm Menü",
+      285
+     ],
+     [
+      "Yarım Ekmek Menü",
+      285
+     ],
+     [
+      "Üç Parça Ekmek Arası Menü",
+      385
+     ],
+     [
+      "Mega Dürüm Menü",
+      410
+     ],
+     [
+      "Bazuka Dürüm Menü",
+      510
+     ],
+     [
+      "Tam Ekmek Arası Menü",
+      510
+     ],
+     [
+      "Pilav Üstü Döner Menü",
+      510
+     ],
+     [
+      "Double Pilav Üstü Menü",
+      610
+     ]
+    ]
+   },
+   {
+    "name": "Yan & İçecek",
+    "items": [
+     [
+      "Ayran (30 cl)",
+      60
+     ],
+     [
+      "Soğan Halkası (4)",
+      100
+     ],
+     [
+      "Kola",
+      125
+     ],
+     [
+      "Patates Kızartması",
+      180
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "munzur-tavuk",
+  "name": "Munzur Tavuk",
+  "type": "Izgara",
+  "color": "#fde2c8",
+  "hours": "11:00-02:45",
+  "cats": [
+   {
+    "name": "Tavuk Izgara",
+    "items": [
+     [
+      "Kelebek Izgara",
+      350
+     ],
+     [
+      "Pirzola",
+      375
+     ],
+     [
+      "Kanat Izgara",
+      400
+     ],
+     [
+      "Göğüs Izgara",
+      400
+     ],
+     [
+      "Göğüs Şiş",
+      400
+     ],
+     [
+      "Kalça Şiş",
+      400
+     ],
+     [
+      "Karışık Izgara",
+      420
+     ]
+    ]
+   },
+   {
+    "name": "Çorbalar",
+    "items": [
+     [
+      "Mercimek",
+      180
+     ],
+     [
+      "Kelle Paça",
+      280
+     ],
+     [
+      "Beyin",
+      280
+     ],
+     [
+      "İşkembe",
+      280
+     ],
+     [
+      "Ayak Paça",
+      280
+     ],
+     [
+      "Karışık",
+      320
+     ]
+    ]
+   },
+   {
+    "name": "Menüler",
+    "items": [
+     [
+      "Lahmacun Menü",
+      550
+     ],
+     [
+      "Tavuk Menüler (1-8)",
+      700
+     ],
+     [
+      "Köfte Menü",
+      800
+     ],
+     [
+      "Döner Menü",
+      800
+     ],
+     [
+      "Munzur Mix",
+      900
+     ]
+    ]
+   },
+   {
+    "name": "Meze & İçecek",
+    "items": [
+     [
+      "Lavaş",
+      30
+     ],
+     [
+      "Su",
+      25
+     ],
+     [
+      "Ayran",
+      50
+     ],
+     [
+      "Soda",
+      50
+     ],
+     [
+      "Kutu İçecek",
+      80
+     ],
+     [
+      "Haydari",
+      100
+     ],
+     [
+      "Çoban Salata",
+      150
+     ],
+     [
+      "Patlıcan Ezme",
+      200
+     ],
+     [
+      "Çiğ Köfte",
+      200
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "vip-mutfak",
+  "name": "Vip Mutfak Ev Yemekleri",
+  "type": "Ev Yemeği",
+  "color": "#e3f1dc",
+  "hours": "11:30-03:00",
+  "cats": [
+   {
+    "name": "Ana Yemek",
+    "items": [
+     [
+      "Nohutlu Tavuklu Pilav",
+      300
+     ],
+     [
+      "Izgara Tavuk",
+      450
+     ],
+     [
+      "Pilav Üstü Tavuk Döner",
+      450
+     ],
+     [
+      "Pilav Üstü Tavuk Şiş",
+      450
+     ],
+     [
+      "Pilav Üstü Et Döner",
+      460
+     ],
+     [
+      "Köri Soslu Tavuk",
+      469
+     ],
+     [
+      "Barbekü Soslu Tavuk",
+      469
+     ],
+     [
+      "Tavuk Külbastı",
+      500
+     ],
+     [
+      "Pilav Üstü Izgara Tavuk",
+      500
+     ],
+     [
+      "Pilav Üstü Köfte",
+      520
+     ],
+     [
+      "Beğendi Üstü Köfte",
+      589
+     ]
+    ]
+   },
+   {
+    "name": "İkili Menüler",
+    "items": [
+     [
+      "Tavuklu Menüler (8 çeşit)",
+      590
+     ],
+     [
+      "Patlıcan Musakka & Pirinç",
+      660
+     ],
+     [
+      "Etli Patlıcan Güveç & Pirinç",
+      699
+     ],
+     [
+      "Et Sote & Pirinç",
+      889
+     ]
+    ]
+   },
+   {
+    "name": "Çorbalar",
+    "items": [
+     [
+      "Domates / Ezogelin / Mercimek / Yayla",
+      189
+     ],
+     [
+      "Zerdeçallı Sebze",
+      189
+     ],
+     [
+      "Brokoli",
+      199
+     ],
+     [
+      "Şehriyeli Tavuk Suyu",
+      209
+     ]
+    ]
+   },
+   {
+    "name": "Makarna",
+    "items": [
+     [
+      "Penne Napoliten",
+      180
+     ],
+     [
+      "Spagetti Bolognese",
+      280
+     ],
+     [
+      "Fırın Makarna",
+      290
+     ],
+     [
+      "Lazanya",
+      460
+     ]
+    ]
+   },
+   {
+    "name": "Tatlı & İçecek",
+    "items": [
+     [
+      "Su",
+      50
+     ],
+     [
+      "Kutu İçecekler",
+      109
+     ],
+     [
+      "Kazandibi",
+      310
+     ],
+     [
+      "Kemalpaşa",
+      310
+     ],
+     [
+      "Brownie",
+      350
+     ],
+     [
+      "San Sebastian",
+      370
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "korele",
+  "name": "Korele",
+  "type": "Uzak Doğu",
+  "color": "#f9d9e0",
+  "hours": "11:30-03:00",
+  "cats": [
+   {
+    "name": "Noodle & Ramen",
+    "items": [
+     [
+      "Sade Noodle",
+      399
+     ],
+     [
+      "Sebzeli Noodle",
+      449
+     ],
+     [
+      "Tavuklu Noodle",
+      499
+     ],
+     [
+      "Dana Etli Noodle",
+      599
+     ],
+     [
+      "Pad Thai Tavuklu",
+      599
+     ],
+     [
+      "Tavuklu Ramen",
+      649
+     ],
+     [
+      "Wanton Ramen",
+      649
+     ],
+     [
+      "Dana Etli Ramen",
+      699
+     ],
+     [
+      "Karidesli Ramen",
+      749
+     ]
+    ]
+   },
+   {
+    "name": "Kore Yemekleri",
+    "items": [
+     [
+      "Kore Wanton (4)",
+      399
+     ],
+     [
+      "Rabokki",
+      499
+     ],
+     [
+      "Cheesy Tteokbokki",
+      499
+     ],
+     [
+      "Tavuklu Rabokki",
+      549
+     ],
+     [
+      "Japchae",
+      599
+     ],
+     [
+      "Kore Chicken",
+      699
+     ],
+     [
+      "Bulgogi Tavuk",
+      699
+     ],
+     [
+      "Bulgogi Udon Noodle",
+      746
+     ],
+     [
+      "Bulgogi Dana",
+      899
+     ]
+    ]
+   },
+   {
+    "name": "Tavuk & Et",
+    "items": [
+     [
+      "Tatlı Ekşi Soslu Tavuk",
+      599
+     ],
+     [
+      "General Tso Tavuk",
+      599
+     ],
+     [
+      "Ballı Kore Tavuk",
+      599
+     ],
+     [
+      "Kaju Fıstıklı Tavuk",
+      699
+     ],
+     [
+      "Yeşil Biberli Dana",
+      899
+     ]
+    ]
+   },
+   {
+    "name": "Başlangıç & Gyoza",
+    "items": [
+     [
+      "Karides Cipsi",
+      249
+     ],
+     [
+      "Edamame",
+      279
+     ],
+     [
+      "Çin Böreği (2)",
+      299
+     ],
+     [
+      "Gyoza (5)",
+      399
+     ],
+     [
+      "Tavuk Topları (8)",
+      399
+     ],
+     [
+      "Corn Tempura",
+      398
+     ],
+     [
+      "Çıtır Pane Tavuk (8)",
+      449
+     ],
+     [
+      "Chicken Katsu Finger",
+      499
+     ]
+    ]
+   },
+   {
+    "name": "Pilav & Bowl",
+    "items": [
+     [
+      "Sade Pilav",
+      299
+     ],
+     [
+      "Sebzeli Pilav",
+      349
+     ],
+     [
+      "Tavuklu Pilav",
+      399
+     ],
+     [
+      "Köri Soslu Tavuklu Pilav",
+      449
+     ],
+     [
+      "Chicken Katsu Bowl",
+      699
+     ],
+     [
+      "Dana Etli Bowl",
+      799
+     ],
+     [
+      "Teriyaki Somon Bowl",
+      799
+     ]
+    ]
+   },
+   {
+    "name": "Çorbalar",
+    "items": [
+     [
+      "Acılı Ekşili",
+      249
+     ],
+     [
+      "Wanton",
+      299
+     ],
+     [
+      "Miso",
+      299
+     ],
+     [
+      "Tom Yum",
+      349
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "bizim-kokorec",
+  "phone": "+905393299140",
+  "phoneText": "0539 329 91 40",
+  "google": {
+   "rating": 4.8,
+   "count": null,
+   "url": "https://www.google.com/maps/place/?q=place_id:ChIJTQNvXlzcuxQRk_KPOURu7JQ",
+   "reviews": [
+    [
+     5,
+     "Harika bir keşif! Kokoreç porsiyon şiddetle tavsiye ederim, yapan usta aynı zamanda Ödemiş köfte yapıyor çiğ alıp deneyin",
+     "11 ay önce"
+    ],
+    [
+     5,
+     "Bizim Kokoreç'ten Ödemiş köfte sipariş ettim. Son zamanlarda yediğim en güzel en lezzetli köfteydi…",
+     "10 ay önce"
+    ],
+    [
+     5,
+     "Lezzet harika üstelik çok da güler yüzlüler, mutlaka gidip denenmesi gerekiyor",
+     "3 ay önce"
+    ]
+   ]
+  },
+  "name": "Bizim Kokoreç (Bilal Usta'nın Yeri)",
+  "type": "Kokoreç",
+  "color": "#fbd9c4",
+  "hours": null,
+  "note": "Menüsü internette yok. Kokoreç, Ödemiş köfte (pişmiş veya çiğ) ve tavuk sote var; fiyat için arayın.",
+  "cats": []
+ },
+ {
+  "id": "yummy-waffle",
+  "phone": "+902322772024",
+  "phoneText": "0232 277 20 24",
+  "google": {
+   "rating": 4.4,
+   "count": null,
+   "url": "https://www.google.com/maps/place/?q=place_id:ChIJkYqDKj_cuxQR6kUYlL2amqE",
+   "reviews": [
+    [
+     5,
+     "Çıtır çıtır tam kıvamında pişirilmiş hamuru yanında üzerindeki bol ve kaliteli çikolatasıyla adeta lezzet şöleni…",
+     "3 hafta önce"
+    ],
+    [
+     5,
+     "Keşfedilmemiş bir mekan, sadece bilen biliyor bence. İzmir'de ilk 5'te, özellikle de bardakta waffle'ı tavsiye ediyorum",
+     "7 ay önce"
+    ],
+    [
+     5,
+     "Malzemesi bol ve lezzetli, işletme sahibi güler yüzlü ve cana yakın",
+     "6 ay önce"
+    ]
+   ]
+  },
+  "name": "Yummy Waffle",
+  "type": "Tatlı",
+  "color": "#ecdff7",
+  "hours": "14:00-02:00",
+  "cats": [
+   {
+    "name": "Waffle",
+    "items": [
+     [
+      "Kendin Yarat",
+      185
+     ],
+     [
+      "Creamy Waffle",
+      320
+     ],
+     [
+      "Happy Kids",
+      320
+     ],
+     [
+      "İdeal Waffle",
+      330
+     ],
+     [
+      "Favori Waffle",
+      330
+     ],
+     [
+      "Kestane Rüyası",
+      330
+     ],
+     [
+      "Yummy Special",
+      335
+     ],
+     [
+      "Big Bang Waffle",
+      340
+     ],
+     [
+      "Tropic Yummy",
+      345
+     ],
+     [
+      "Orman Meyveli Yummy",
+      365
+     ]
+    ]
+   },
+   {
+    "name": "Dondurma",
+    "items": [
+     [
+      "Karamelli",
+      85
+     ],
+     [
+      "Çikolatalı",
+      85
+     ],
+     [
+      "Vanilyalı",
+      85
+     ],
+     [
+      "Çilekli",
+      85
+     ]
+    ]
+   },
+   {
+    "name": "İçecekler",
+    "items": [
+     [
+      "Su",
+      30
+     ],
+     [
+      "Soda",
+      60
+     ],
+     [
+      "Kola (33 cl)",
+      100
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "adil-muftuoglu",
+  "phone": "+902322314109",
+  "phoneText": "0232 231 41 09",
+  "google": {
+   "rating": 4.2,
+   "count": 598,
+   "url": "https://www.google.com/maps/place/?q=place_id:ChIJ8Z99sITduxQRDYN33nC0me8",
+   "reviews": [
+    [
+     5,
+     "We got a recommendation for this restaurant from TikTok during our first visit to Izmir. We ordered rice, green beans, chicken, and lamb. The chicken…",
+     "3 ay önce"
+    ],
+    [
+     4,
+     "Michelin recommended resturant. Classical turkish \"On display\" ready food restuarant which is called \"Esnaf lokantasi\" in Turkish. We ate dinner…",
+     "1 yıl önce"
+    ],
+    [
+     1,
+     "Don’t order on trendyol. I spent over 600tl for them to send me only half of the meal, and all I got was 2 slices of potato, 4 slices of carrot, and…",
+     "7 ay önce"
+    ]
+   ]
+  },
+  "name": "Adil Müftüoğlu Uğur Lokantası",
+  "type": "Ev Yemeği",
+  "color": "#e3f1dc",
+  "hours": "11:30-21:30",
+  "cats": [
+   {
+    "name": "Ana Yemekler",
+    "items": [
+     [
+      "Taze Fasulye",
+      330
+     ],
+     [
+      "Fırın Musakka",
+      430
+     ],
+     [
+      "Hindi Tandır",
+      430
+     ],
+     [
+      "Karnıyarık",
+      430
+     ],
+     [
+      "Çanak Köfte",
+      500
+     ],
+     [
+      "Ciğer Sarma",
+      550
+     ],
+     [
+      "Dana Güveç",
+      650
+     ],
+     [
+      "Sultan Kebabı",
+      650
+     ]
+    ]
+   },
+   {
+    "name": "Izgaralar",
+    "items": [
+     [
+      "Tavuk İncik Izgara (240 gr)",
+      390
+     ],
+     [
+      "Gobit Tavuk (240 gr)",
+      430
+     ],
+     [
+      "Kasap Köfte (200 gr)",
+      520
+     ],
+     [
+      "Adil Köfte (200 gr)",
+      520
+     ],
+     [
+      "Islama Köfte (200 gr)",
+      560
+     ],
+     [
+      "Gobit Köfte (200 gr)",
+      560
+     ],
+     [
+      "Domates Soslu Adil Köfte",
+      560
+     ]
+    ]
+   },
+   {
+    "name": "Ekmek Arası Köfte",
+    "items": [
+     [
+      "120 gr",
+      320
+     ],
+     [
+      "160 gr",
+      390
+     ],
+     [
+      "200 gr",
+      500
+     ]
+    ]
+   },
+   {
+    "name": "Menüler",
+    "items": [
+     [
+      "Sporcu Menü",
+      390
+     ],
+     [
+      "Ekmek Arası Menü 1",
+      440
+     ],
+     [
+      "Dev Sporcu Menü",
+      590
+     ],
+     [
+      "Adil Menü 1",
+      620
+     ],
+     [
+      "Tavuk Izgara Menü 1",
+      820
+     ],
+     [
+      "Ekmek Arası Menü 2",
+      850
+     ],
+     [
+      "Adil Menü 2",
+      1200
+     ],
+     [
+      "Adil Menü 3",
+      2000
+     ]
+    ]
+   },
+   {
+    "name": "Çorba, Pilav & Yan",
+    "items": [
+     [
+      "Mercimek Çorbası",
+      240
+     ],
+     [
+      "Yayla Çorbası",
+      240
+     ],
+     [
+      "Et Suyu Çorbası",
+      240
+     ],
+     [
+      "Pirinç Pilavı",
+      140
+     ],
+     [
+      "Arpa Şehriye Pilavı",
+      140
+     ],
+     [
+      "Cacık",
+      140
+     ],
+     [
+      "Yoğurt",
+      140
+     ],
+     [
+      "Salata",
+      190
+     ]
+    ]
+   },
+   {
+    "name": "Mezeler",
+    "items": [
+     [
+      "Haydari",
+      250
+     ],
+     [
+      "Yoğurtlu Köz Patlıcan",
+      250
+     ],
+     [
+      "Pembe Sultan",
+      250
+     ],
+     [
+      "Atom",
+      250
+     ],
+     [
+      "Yoğurtlu Semizotu",
+      250
+     ],
+     [
+      "Köpoğlu",
+      250
+     ],
+     [
+      "Brokoli",
+      250
+     ],
+     [
+      "Pancar",
+      250
+     ]
+    ]
+   },
+   {
+    "name": "Tatlılar",
+    "items": [
+     [
+      "Lor Tatlısı",
+      130
+     ],
+     [
+      "Fırın Sütlaç",
+      190
+     ],
+     [
+      "Krem Şokola",
+      230
+     ],
+     [
+      "Gece Gündüz",
+      230
+     ]
+    ]
+   },
+   {
+    "name": "İçecekler",
+    "items": [
+     [
+      "Su",
+      30
+     ],
+     [
+      "Soda",
+      50
+     ],
+     [
+      "Ayran",
+      60
+     ],
+     [
+      "Kola / Kola Light",
+      90
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "mamosa",
+  "phone": "+902322770035",
+  "phoneText": "0232 277 00 35",
+  "google": {
+   "rating": 4.2,
+   "count": 310,
+   "url": "https://www.google.com/maps/place/?q=place_id:ChIJ-zOTZLzduxQRcA8Ivm1gYwI",
+   "reviews": [
+    [
+     5,
+     "The soup was the best ive had and the islak burgers are delicious I have been every day for the last 6 days.",
+     "2 yıl önce"
+    ],
+    [
+     5,
+     "Good service and food",
+     "2 yıl önce"
+    ],
+    [
+     5,
+     "i love kokorec👍",
+     "3 yıl önce"
+    ]
+   ]
+  },
+  "name": "Mamosa",
+  "type": "Döner & Burger",
+  "color": "#ffe4c7",
+  "hours": "11:00-22:00",
+  "cats": [
+   {
+    "name": "Tavuk Döner",
+    "items": [
+     [
+      "Eski Usul Dürüm",
+      195
+     ],
+     [
+      "Özel Antakya Soslu Dürüm",
+      195
+     ],
+     [
+      "Yarım Ekmek Tavuk Döner",
+      195
+     ],
+     [
+      "Tombik Döner",
+      195
+     ],
+     [
+      "Cacık Soslu Antakya Dürüm",
+      260
+     ],
+     [
+      "Cheese Antakya Dürüm",
+      260
+     ],
+     [
+      "Antakya Dürüm 1.5",
+      270
+     ],
+     [
+      "Mega Tavuk Döner Dürüm",
+      270
+     ],
+     [
+      "3/4 Ekmek Tavuk Döner",
+      270
+     ],
+     [
+      "Atom Acılı Mega Dürüm",
+      280
+     ],
+     [
+      "Duble Antakya Dürüm",
+      320
+     ],
+     [
+      "İskender (Tavuk)",
+      325
+     ],
+     [
+      "Pilav Üstü Tavuk Döner",
+      325
+     ],
+     [
+      "Bazuka Dürüm",
+      325
+     ],
+     [
+      "Porsiyon Tavuk Döner",
+      325
+     ],
+     [
+      "Cheddarlı Mega Dürüm",
+      340
+     ],
+     [
+      "Sporcu Tavuklu Pilav",
+      390
+     ],
+     [
+      "Duble Mega Dürüm",
+      499
+     ]
+    ]
+   },
+   {
+    "name": "Burgerler",
+    "items": [
+     [
+      "Tavuk Burger",
+      195
+     ],
+     [
+      "Klasik Burger",
+      295
+     ],
+     [
+      "Acılı Burger",
+      295
+     ],
+     [
+      "Smash Burger",
+      360
+     ],
+     [
+      "Bol Peynirli Burger",
+      370
+     ],
+     [
+      "Mamosa Burger",
+      395
+     ]
+    ]
+   },
+   {
+    "name": "Izgara",
+    "items": [
+     [
+      "Çeyrek Ekmek Köfte",
+      195
+     ],
+     [
+      "Yarım Ekmek Köfte",
+      295
+     ],
+     [
+      "Yarım Ekmek Sucuk",
+      295
+     ],
+     [
+      "3/4 Ekmek Köfte",
+      395
+     ],
+     [
+      "Kasap Köfte",
+      590
+     ]
+    ]
+   },
+   {
+    "name": "Menüler",
+    "items": [
+     [
+      "Tavuk Burger Menü",
+      295
+     ],
+     [
+      "Antakya Dürüm Menü",
+      330
+     ],
+     [
+      "Yarım Ekmek Tavuk Döner Menü",
+      330
+     ],
+     [
+      "Mega Dürüm Menü",
+      395
+     ],
+     [
+      "Klasik Burger Menü",
+      430
+     ],
+     [
+      "Yarım Köfte Menü",
+      430
+     ],
+     [
+      "Smash Burger Menü",
+      490
+     ],
+     [
+      "Mamosa Burger Menü",
+      530
+     ],
+     [
+      "Kanka Menü",
+      550
+     ],
+     [
+      "Kafadar Menü",
+      750
+     ],
+     [
+      "Aile Menü",
+      1100
+     ]
+    ]
+   },
+   {
+    "name": "Atıştırmalık & Salata",
+    "items": [
+     [
+      "Patates Kızartması",
+      119
+     ],
+     [
+      "Elma Dilim Patates",
+      120
+     ],
+     [
+      "Soğan Halkası (10)",
+      120
+     ],
+     [
+      "Nugget (10)",
+      120
+     ],
+     [
+      "Pirinç Pilavı",
+      150
+     ],
+     [
+      "Soğuk Sandviç",
+      160
+     ],
+     [
+      "Mozzarella (10)",
+      190
+     ],
+     [
+      "Çıtır Tavuk (6)",
+      190
+     ],
+     [
+      "Akdeniz Salata",
+      190
+     ],
+     [
+      "Patso (ekmek/dürüm)",
+      195
+     ],
+     [
+      "Vejetaryen Dürüm",
+      195
+     ],
+     [
+      "Sezar Salata",
+      260
+     ],
+     [
+      "Çıtır Tabak",
+      330
+     ]
+    ]
+   },
+   {
+    "name": "İçecekler",
+    "items": [
+     [
+      "Su",
+      25
+     ],
+     [
+      "Soda",
+      50
+     ],
+     [
+      "Ayran (30 cl)",
+      65
+     ],
+     [
+      "Niğde Gazozu",
+      65
+     ],
+     [
+      "Kutu İçecekler (33 cl)",
+      90
+     ],
+     [
+      "Şalgam",
+      90
+     ],
+     [
+      "1 L Kola / Ayran",
+      120
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "tezgahtar",
+  "name": "Tezgahtar",
+  "type": "Tost & Büfe",
+  "color": "#fff0c2",
+  "hours": "08:30-22:00",
+  "cats": [
+   {
+    "name": "Sandviçler",
+    "items": [
+     [
+      "Patsola Sandviç",
+      180
+     ],
+     [
+      "Pat Dog Sandviç",
+      200
+     ],
+     [
+      "Tezgah Special Sandviç",
+      220
+     ],
+     [
+      "Doubledog Sandviç",
+      225
+     ]
+    ]
+   },
+   {
+    "name": "Hot Dog & Özel",
+    "items": [
+     [
+      "El Clasico",
+      200
+     ],
+     [
+      "Patdoggy",
+      295
+     ],
+     [
+      "Mega Hot Dog",
+      295
+     ],
+     [
+      "Tezgah Special",
+      300
+     ],
+     [
+      "Crispy Chicken",
+      300
+     ],
+     [
+      "Doubledog",
+      315
+     ],
+     [
+      "Bulldog",
+      350
+     ]
+    ]
+   },
+   {
+    "name": "Menüler",
+    "items": [
+     [
+      "Mini Street Duo",
+      379
+     ],
+     [
+      "Hot Combo",
+      425
+     ],
+     [
+      "Hot Friends (3 kişilik)",
+      600
+     ],
+     [
+      "Street Feast (3 kişilik)",
+      625
+     ],
+     [
+      "Bulldog Deluxe",
+      650
+     ]
+    ]
+   },
+   {
+    "name": "Yan Ürünler",
+    "items": [
+     [
+      "Patates Kızartması",
+      120
+     ],
+     [
+      "Çıtır Tavuk (200 gr)",
+      210
+     ],
+     [
+      "Double Patates",
+      240
+     ]
+    ]
+   },
+   {
+    "name": "İçecekler",
+    "items": [
+     [
+      "Kutu İçecekler (33 cl)",
+      90
+     ],
+     [
+      "1 L Kola / Fanta / Sprite",
+      140
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pavo",
+  "phone": "+905448867286",
+  "phoneText": "0544 886 72 86",
+  "google": {
+   "rating": 4.7,
+   "count": 77,
+   "url": "https://www.google.com/maps/place/?q=place_id:ChIJD7Zea1XduxQRQGcglVWHz_Q",
+   "reviews": [
+    [
+     5,
+     "Mekan estetik açıdan fotoğraf için mükemmel bir yer🙃 Benim için özellikle sandviçleri, kruvasanları ve browniesi tekrar tekrar gelip yemek istediğim…",
+     "5 ay önce"
+    ],
+    [
+     5,
+     "Mükemmel lezzet kalite ve fiyat dengesi hele cafe sahibi umut beyin misafirperverliği evimizde gibi hissettirdi her fırsatta uğrayacağız herşey için…",
+     "2 hafta önce"
+    ]
+   ]
+  },
+  "name": "Pavo Coffee Co",
+  "type": "Kafe",
+  "color": "#f3e3d3",
+  "hours": "09:30-22:45",
+  "note": "Pazar 10:30'da açılıyor.",
+  "cats": [
+   {
+    "name": "Sıcak Kahveler",
+    "items": [
+     [
+      "Espresso",
+      175
+     ],
+     [
+      "Filtre Kahve",
+      195
+     ],
+     [
+      "Americano",
+      225
+     ],
+     [
+      "Latte",
+      245
+     ],
+     [
+      "Cappuccino",
+      255
+     ],
+     [
+      "Flat White",
+      255
+     ],
+     [
+      "Mocha",
+      285
+     ],
+     [
+      "White Mocha",
+      285
+     ],
+     [
+      "Caramel Macchiato",
+      285
+     ],
+     [
+      "Toffeenut Latte",
+      285
+     ]
+    ]
+   },
+   {
+    "name": "Soğuk İçecekler",
+    "items": [
+     [
+      "Ice Americano",
+      225
+     ],
+     [
+      "Ice Latte",
+      245
+     ],
+     [
+      "Cool Lime",
+      285
+     ],
+     [
+      "Strawberry Lime",
+      285
+     ],
+     [
+      "İmza Kokteyl (Maymuz, Narsist, Kuzu Kulağı Sour)",
+      350
+     ]
+    ]
+   },
+   {
+    "name": "Sandviçler",
+    "items": [
+     [
+      "Tereyağlı Kruvasan",
+      300
+     ],
+     [
+      "Pesto Mozzarella Focaccia",
+      415
+     ],
+     [
+      "Hindi Füme Cheddar Focaccia",
+      415
+     ],
+     [
+      "Füme Hindi Cheddar Kruvasan",
+      435
+     ],
+     [
+      "Pesto Füme Kaburga Focaccia",
+      495
+     ],
+     [
+      "Trüf Ezmeli Dana Cotto Focaccia",
+      515
+     ]
+    ]
+   },
+   {
+    "name": "Tatlılar",
+    "items": [
+     [
+      "Lotus Cookie",
+      240
+     ],
+     [
+      "Lotus Cup",
+      320
+     ],
+     [
+      "White Chocolate Brownie",
+      335
+     ],
+     [
+      "Tiramisu",
+      340
+     ],
+     [
+      "Çilekli Magnolia",
+      340
+     ],
+     [
+      "Supangle",
+      340
+     ],
+     [
+      "Bademli Kruvasan",
+      400
+     ],
+     [
+      "Çilekli Kruvasan",
+      400
+     ],
+     [
+      "Pavole",
+      450
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ozsut",
+  "phone": "4441110",
+  "phoneText": "444 11 10",
+  "google": {
+   "rating": 3.9,
+   "count": null,
+   "url": "https://www.google.com/maps/place/?q=place_id:ChIJyz0MQV3cuxQR_TVM1sJCw_A",
+   "reviews": [
+    [
+     5,
+     "Delicious food here",
+     "4 yıl önce"
+    ]
+   ]
+  },
+  "name": "Özsüt",
+  "type": "Kafe",
+  "color": "#ecdff7",
+  "hours": "09:00-23:45",
+  "cats": [
+   {
+    "name": "Tatlılar",
+    "items": [
+     [
+      "Kazandibi",
+      336
+     ],
+     [
+      "Fırın Sütlaç",
+      348
+     ],
+     [
+      "Profiterol",
+      366
+     ]
+    ]
+   },
+   {
+    "name": "Tost & Sandviç",
+    "items": [
+     [
+      "Anadolu Sandviç",
+      415
+     ],
+     [
+      "Pastırmalı Tost",
+      440
+     ],
+     [
+      "Peynirli Tost",
+      456
+     ],
+     [
+      "Kaşarlı Salamlı Tost",
+      498
+     ]
+    ]
+   },
+   {
+    "name": "Çorbalar",
+    "items": [
+     [
+      "Acılı Ezogelin",
+      360
+     ],
+     [
+      "İspanyol Domates",
+      360
+     ],
+     [
+      "Selanik Çorbası",
+      360
+     ],
+     [
+      "Mantar Çorbası",
+      360
+     ]
+    ]
+   },
+   {
+    "name": "Ana Yemek & Pizza",
+    "items": [
+     [
+      "Kremalı Mantarlı Tavuk",
+      678
+     ],
+     [
+      "Anadoludan Pizza",
+      780
+     ],
+     [
+      "Margherita Pizza",
+      798
+     ],
+     [
+      "Viyana Şinitzel",
+      810
+     ],
+     [
+      "Ay Pizza",
+      912
+     ],
+     [
+      "Manisa Köfte",
+      990
+     ],
+     [
+      "İsveç Köfte",
+      990
+     ]
+    ]
+   },
+   {
+    "name": "Kahvaltı & Salata",
+    "items": [
+     [
+      "Tavuklu Salata",
+      606
+     ],
+     [
+      "Cevizli Köylü Salata",
+      606
+     ],
+     [
+      "Ton Balıklı Salata",
+      696
+     ],
+     [
+      "Pratik Kahvaltı (1 kişilik)",
+      780
+     ],
+     [
+      "Serpme Kahvaltı (2 kişilik)",
+      2100
+     ]
+    ]
+   }
+  ]
+ }
+]

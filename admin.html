@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Esnaf Yönetimi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f4ef;--surface:#fff;--surface-2:#f0ede6;--ink:#16181d;--muted:#6b6f78;--line:#e4e0d6;--brand:#1b2a6b;--accent:#ff6a3d;--ok:#12a150;--no:#c2410c;--radius:18px}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1015;--surface:#171a21;--surface-2:#1f232c;--ink:#f1f2f4;--muted:#9aa0ab;--line:#2a2f3a;--brand:#8ea2ff;--accent:#ff8a63;--ok:#4ade80;--no:#fb923c}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,sans-serif}
+h1,h2{font-family:"Bricolage Grotesque",Inter,sans-serif;letter-spacing:-.02em;margin:0}
+.wrap{max-width:760px;margin:0 auto;padding:32px 16px 64px}
+h1{font-size:34px;font-weight:800}
+h1 b{color:var(--accent)}
+.sub{color:var(--muted);margin:6px 0 24px}
+.sub a{color:inherit}
+fieldset{border:1px solid var(--line);background:var(--surface);border-radius:var(--radius);padding:18px;margin:0 0 16px}
+legend{font-weight:600;padding:0 6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+label{display:grid;gap:4px;font-size:13px;font-weight:500;color:var(--muted)}
+input,textarea,select{font:inherit;color:var(--ink);background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:10px 12px;width:100%}
+input:focus,textarea:focus{outline:2px solid var(--brand);outline-offset:-1px}
+.iimg{flex:0 0 40px;width:40px;height:40px;padding:0;border-radius:10px;overflow:hidden;position:relative;font-size:16px}
+.iimg img{width:100%;height:100%;object-fit:cover;display:block}
+.iimg .x{position:absolute;top:0;right:0;background:rgb(0 0 0/.65);color:#fff;font-size:11px;line-height:1;padding:2px 4px;border-bottom-left-radius:6px}
+.iimg.busy{opacity:.5;pointer-events:none}
+.star-tag{color:#f5a524;font-weight:700}
+textarea{min-height:120px;font-family:ui-monospace,Menlo,monospace;font-size:13px}
+.row{display:flex;gap:8px;align-items:center}
+.check{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--ink)}
+.check input{width:auto}
+.irow{display:flex;gap:6px;align-items:center}
+.irow .iname{flex:1 1 auto;min-width:0}
+.irow .iprice{flex:0 0 96px;text-align:right}
+.irow .irm{flex:0 0 auto;padding:6px 8px}
+.items{display:grid;gap:6px}
+.ihead{display:flex;gap:6px;font-size:12px;color:var(--muted);padding-right:34px}
+.ihead span:first-child{flex:1}
+.ihead span:not(:first-child){flex:0 0 96px;text-align:right}
+.cat{border:1px dashed var(--line);border-radius:14px;padding:12px;display:grid;gap:10px;margin-bottom:10px}
+.hint{font-size:12px;color:var(--muted)}
+button{font:inherit;cursor:pointer;border-radius:12px;padding:10px 16px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-weight:600}
+button.primary{background:var(--accent);color:#fff;border-color:transparent;padding:14px 22px;font-size:16px}
+button.link{border:0;background:none;color:var(--no);padding:4px;font-weight:500}
+.list{display:grid;gap:6px;max-height:340px;overflow:auto}
+.item{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:12px;background:var(--surface-2)}
+.item span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.item small{color:var(--muted)}
+.item button{padding:6px 10px;font-size:13px}
+.item.editing{outline:2px solid var(--brand)}
+#filter{margin-bottom:10px}
+.login{max-width:380px;margin:12vh auto 0;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px;display:grid;gap:14px}
+.login h1{font-size:28px}
+.login p{margin:0;color:var(--muted)}
+.login .err{color:var(--no);font-size:14px;min-height:1em}
+.top{display:flex;justify-content:space-between;align-items:start;gap:12px}
+#msg{margin-top:14px;padding:12px 14px;border-radius:12px;display:none}
+#msg.ok{display:block;background:color-mix(in srgb,var(--ok) 15%,transparent);color:var(--ok)}
+#msg.err{display:block;background:color-mix(in srgb,var(--no) 15%,transparent);color:var(--no)}
+</style>
+</head>
+<body>
+<form class="login" id="loginForm">
+  <h1>Esnaf <b style="color:var(--accent)">Yönetimi</b></h1>
+  <p>Devam etmek için admin şifresini gir.</p>
+  <label>Şifre <input id="loginPw" type="password" required autocomplete="current-password" autofocus></label>
+  <button class="primary" type="submit">Giriş yap</button>
+  <div class="err" id="loginErr" role="alert"></div>
+</form>
+
+<main class="wrap" id="app" hidden>
+  <div class="top"><h1>Esnaf <b>Yönetimi</b></h1><button type="button" id="logout">Çıkış</button></div>
+  <p class="sub">Yapılan değişiklikler hemen <a href="/">ana sayfada</a> görünür.</p>
+
+  <form id="f" autocomplete="off">
+
+    <fieldset>
+      <legend>Esnaflar</legend>
+      <input id="filter" type="search" placeholder="Esnaf ara…">
+      <div class="list" id="list"></div>
+    </fieldset>
+
+    <h2 id="formTitle" style="margin:8px 0 12px">Yeni esnaf</h2>
+
+    <fieldset>
+      <legend>Esnaf bilgileri</legend>
+      <div class="grid">
+        <label>İsim * <input name="name" required maxlength="80"></label>
+        <label>Tür * <input name="type" required maxlength="40" list="turler" placeholder="Döner & Burger"></label>
+        <label>Telefon <input name="phone" type="tel" placeholder="0532 123 45 67"></label>
+        <label>Harita linki <input name="map" type="url" placeholder="https://maps.app.goo.gl/…"></label>
+      </div>
+      <datalist id="turler"></datalist>
+      <div class="grid" style="margin-top:12px">
+        <label>Açılış <input name="open" type="time" value="11:00"></label>
+        <label>Kapanış <input name="close" type="time" value="23:00"></label>
+      </div>
+      <label class="check" style="margin-top:10px"><input type="checkbox" name="noHours"> Çalışma saati bilinmiyor</label>
+      <label class="check" style="margin-top:12px"><input type="checkbox" name="featured"> ⭐ Öne çıkar (ana sayfada en üstte gösterilir)</label>
+      <label style="margin-top:12px">Not <textarea name="note" maxlength="300" style="min-height:60px;font-family:inherit" placeholder="Ör. Öğrenci kartıyla %10 indirim"></textarea></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Menü</legend>
+      <p class="hint" style="margin-top:0">Birden fazla boy varsa "Fiyat sütunları"na virgülle yaz (ör. <code>Küçük, Büyük</code>). O boy yoksa fiyatı boş bırak. Ürün adında Enter'a basınca yeni satır açılır.</p>
+      <div id="cats"></div>
+      <button type="button" id="addCat">+ Kategori ekle</button>
+    </fieldset>
+
+    <div class="row">
+      <button class="primary" type="submit">Esnafı kaydet</button>
+      <button type="button" id="cancel" hidden>Vazgeç, yeni esnaf ekle</button>
+    </div>
+    <div id="msg" role="status"></div>
+  </form>
+</main>
+
+<template id="catTpl">
+  <div class="cat">
+    <div class="grid">
+      <label>Kategori adı <input class="cname" required maxlength="60" placeholder="Tostlar"></label>
+      <label>Fiyat sütunları <input class="ccols" value="Fiyat" placeholder="Küçük, Büyük"></label>
+    </div>
+    <div class="ihead"></div>
+    <div class="items"></div>
+    <div class="row"><button type="button" class="addItem">+ Ürün ekle</button><button type="button" class="link rm" style="margin-left:auto">Kategoriyi sil</button></div>
+  </div>
+</template>
+
+<script>
+const $ = s => document.querySelector(s);
+const f = $("#f");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let pw = "";
+
+async function login(candidate) {
+  try {
+    const r = await fetch("/api/esnaflar?login", {headers: {Authorization: "Bearer " + candidate}});
+    if (!r.ok) return (await r.json().catch(() => ({}))).error || "Giriş başarısız.";
+  } catch { return "Sunucuya ulaşılamadı."; }
+  pw = candidate;
+  try { sessionStorage.adminPw = pw; } catch {}
+  $("#loginForm").hidden = true;
+  $("#app").hidden = false;
+  load();
+}
+function logout() {
+  pw = "";
+  try { sessionStorage.removeItem("adminPw"); } catch {}
+  $("#app").hidden = true;
+  $("#loginForm").hidden = false;
+  $("#loginPw").value = "";
+  $("#list").innerHTML = "";
+  esnaflar = [];
+}
+$("#logout").onclick = logout;
+$("#loginForm").onsubmit = async e => {
+  e.preventDefault();
+  $("#loginErr").textContent = (await login($("#loginPw").value)) || "";
+};
+
+const colsOf = cat => {
+  const c = cat.querySelector(".ccols").value.split(",").map(s => s.trim()).filter(Boolean);
+  return c.length ? c : ["Fiyat"];
+};
+
+// Keep every row's price inputs in step with the category's column list.
+function syncCols(cat) {
+  const cols = colsOf(cat);
+  cat.querySelector(".ihead").innerHTML = `<span>Ürün</span>` + cols.map(c => `<span>${esc(c)} ₺</span>`).join("");
+  cat.querySelectorAll(".irow").forEach(row => {
+    let prices = row.querySelectorAll(".iprice");
+    for (let i = prices.length; i < cols.length; i++) row.querySelector(".iimg").before(priceInput());
+    for (let i = prices.length - 1; i >= cols.length; i--) prices[i].remove();
+    row.querySelectorAll(".iprice").forEach((el, i) => { el.placeholder = cols[i]; el.setAttribute("aria-label", cols[i] + " fiyatı"); });
+  });
+}
+
+function setItemImg(row, url) {
+  row.dataset.img = url;
+  row.querySelector(".iimg").innerHTML = url ? `<img src="${esc(url)}" alt=""><span class="x" title="Resmi kaldır">✕</span>` : "📷";
+}
+
+// Resize in the browser (phone photos are 5-10 MB) and upload; calls done(url).
+function pickImage(maxSide, busyEl, done) {
+  const input = Object.assign(document.createElement("input"), {type: "file", accept: "image/*"});
+  input.onchange = async () => {
+    const file = input.files[0];
+    if (!file) return;
+    busyEl.classList.add("busy");
+    try {
+      const bmp = await createImageBitmap(file);
+      const s = Math.min(1, maxSide / Math.max(bmp.width, bmp.height));
+      const canvas = new OffscreenCanvas(Math.round(bmp.width * s), Math.round(bmp.height * s));
+      canvas.getContext("2d").drawImage(bmp, 0, 0, canvas.width, canvas.height);
+      const blob = await canvas.convertToBlob({type: "image/webp", quality: 0.82});
+      const r = await fetch("/api/upload", {method: "POST", headers: {"Content-Type": "image/webp", Authorization: "Bearer " + pw}, body: blob});
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(data.error || `Resim yüklenemedi (${r.status}).`);
+      done(data.url);
+    } catch (err) { show(err.message || "Resim okunamadı.", false); }
+    finally { busyEl.classList.remove("busy"); }
+  };
+  input.click();
+}
+
+
+function priceInput() {
+  const el = document.createElement("input");
+  Object.assign(el, {className: "iprice", type: "number", min: 0, step: "0.01", inputMode: "decimal"});
+  return el;
+}
+
+function addItem(cat, [name = "", ...prices] = [], after = null) {
+  const row = document.createElement("div");
+  row.className = "irow";
+  row.innerHTML = `<input class="iname" maxlength="80" placeholder="Ürün adı" aria-label="Ürün adı"><button type="button" class="iimg" title="Ürün resmi (isteğe bağlı)" aria-label="Ürün resmi">📷</button><button type="button" class="link irm" aria-label="Ürünü sil">✕</button>`;
+  if (typeof prices.at(-1) === "string") setItemImg(row, prices.pop()); // item = [name, ...prices, imageUrl?]
+  row.querySelector(".iimg").onclick = e => {
+    if (e.target.matches(".x")) return setItemImg(row, "");
+    pickImage(600, row.querySelector(".iimg"), url => setItemImg(row, url));
+  };
+  row.querySelector(".iname").value = name;
+  row.querySelector(".irm").onclick = () => row.remove();
+  after ? after.after(row) : cat.querySelector(".items").append(row);
+  syncCols(cat);
+  row.querySelectorAll(".iprice").forEach((el, i) => { if (prices[i] != null && prices[i] >= 0) el.value = prices[i]; });
+  return row;
+}
+
+function addCat(empty = true) {
+  const node = $("#catTpl").content.firstElementChild.cloneNode(true);
+  node.querySelector(".rm").onclick = () => node.remove();
+  node.querySelector(".addItem").onclick = () => addItem(node).querySelector(".iname").focus();
+  node.querySelector(".ccols").oninput = () => syncCols(node);
+  // Enter in a row adds the next row instead of submitting the whole form
+  node.querySelector(".items").onkeydown = e => {
+    if (e.key !== "Enter" || !e.target.matches(".iname, .iprice")) return;
+    e.preventDefault();
+    addItem(node, [], e.target.closest(".irow")).querySelector(".iname").focus();
+  };
+  $("#cats").append(node);
+  syncCols(node);
+  if (empty) addItem(node);
+  return node;
+}
+$("#addCat").onclick = () => addCat().querySelector(".cname").focus();
+addCat();
+
+f.noHours.onchange = () => { f.open.disabled = f.close.disabled = f.noHours.checked; };
+
+let esnaflar = [], editingId = null;
+
+async function load() {
+  try { esnaflar = await (await fetch("/api/esnaflar")).json(); } catch { return show("Esnaf listesi yüklenemedi.", false); }
+  renderList();
+  // Suggest existing types so the filter chips don't fragment ("Döner" vs "döner").
+  const opts = key => [...new Set(esnaflar.map(m => m[key]))].map(v => `<option value="${esc(v)}">`).join("");
+  $("#turler").innerHTML = opts("type");
+}
+
+function renderList() {
+  const q = $("#filter").value.trim().toLocaleLowerCase("tr-TR");
+  $("#list").innerHTML = esnaflar.filter(m => m.name.toLocaleLowerCase("tr-TR").includes(q)).map(m => `
+    <div class="item ${m.id === editingId ? "editing" : ""}" data-id="${esc(m.id)}">
+      <span>${m.featured ? `<span class="star-tag" title="Öne çıkan">⭐</span> ` : ""}${esc(m.name)} <small>· ${esc(m.type)}</small></span>
+      <button type="button" data-act="edit">Düzenle</button>
+      <button type="button" data-act="del" class="link">Sil</button>
+    </div>`).join("") || `<p class="hint">Esnaf bulunamadı.</p>`;
+}
+$("#filter").oninput = renderList;
+
+$("#list").onclick = async e => {
+  const act = e.target.dataset.act, id = e.target.closest(".item")?.dataset.id;
+  const m = esnaflar.find(x => x.id === id);
+  if (!m) return;
+  if (act === "edit") return fill(m);
+  if (act === "del" && confirm(`"${m.name}" silinsin mi? Bu geri alınamaz.`)) {
+    const r = await api("DELETE", id);
+    if (r.ok) { show(`✓ ${m.name} silindi.`, true); if (editingId === id) resetForm(); load(); }
+  }
+};
+
+function fill(m) {
+  editingId = m.id;
+  const el = f.elements;
+  el.name.value = m.name; el.type.value = m.type; el.map.value = m.map || "";
+  el.phone.value = m.phoneText || m.phone || ""; el.featured.checked = !!m.featured;
+  el.note.value = m.note || "";
+  el.noHours.checked = !m.hours;
+  [el.open.value, el.close.value] = m.hours ? m.hours.split("-") : ["11:00", "23:00"];
+  el.open.disabled = el.close.disabled = !m.hours;
+  $("#cats").innerHTML = "";
+  m.cats.forEach(c => {
+    const node = addCat(false);
+    node.querySelector(".cname").value = c.name;
+    node.querySelector(".ccols").value = (c.cols || ["Fiyat"]).join(", ");
+    c.items.forEach(it => addItem(node, it));
+  });
+  $("#formTitle").textContent = `Düzenleniyor: ${m.name}`;
+  $("#cancel").hidden = false;
+  renderList();
+  $("#formTitle").scrollIntoView({behavior: "smooth"});
+}
+
+function resetForm() {
+  editingId = null;
+  f.reset(); $("#cats").innerHTML = ""; addCat();
+  f.open.disabled = f.close.disabled = false;
+  $("#formTitle").textContent = "Yeni esnaf";
+  $("#cancel").hidden = true;
+  renderList();
+}
+$("#cancel").onclick = resetForm;
+
+async function api(method, id, body) {
+  try {
+    const r = await fetch("/api/esnaflar" + (id ? "?id=" + encodeURIComponent(id) : ""), {
+      method,
+      headers: {"Content-Type": "application/json", Authorization: "Bearer " + pw},
+      body: body && JSON.stringify(body),
+    });
+    if (r.status === 401) { logout(); $("#loginErr").textContent = "Oturum sona erdi, tekrar giriş yap."; }
+    else if (!r.ok) show((await r.json().catch(() => ({}))).error || `İşlem başarısız (${r.status}).`, false);
+    return r;
+  } catch { show("Sunucuya ulaşılamadı.", false); return {ok: false}; }
+}
+
+// "0532 123 45 67" -> "+905321234567"
+function toE164(raw) {
+  const d = raw.replace(/\D/g, "");
+  if (!d) return "";
+  if (d.startsWith("90")) return "+" + d;
+  if (d.startsWith("0")) return "+90" + d.slice(1);
+  return d.length === 10 ? "+90" + d : "+" + d;
+}
+
+function parseCats() {
+  return [...document.querySelectorAll(".cat")].map((el, ci) => {
+    const name = el.querySelector(".cname").value.trim();
+    const cols = el.querySelector(".ccols").value.split(",").map(s => s.trim()).filter(Boolean);
+    if (!cols.length) cols.push("Fiyat");
+    const items = [...el.querySelectorAll(".irow")].map(row => {
+      const n = row.querySelector(".iname").value.trim();
+      const ps = [...row.querySelectorAll(".iprice")].map(p => p.value === "" ? -1 : Number(p.value));
+      if (!n && ps.every(p => p === -1)) return null; // blank row, ignore
+      if (!n) throw new Error(`"${name || "Kategori " + (ci + 1)}" içinde adı boş bir ürün var.`);
+      if (ps.every(p => p === -1)) throw new Error(`"${n}" için en az bir fiyat gir.`);
+      return row.dataset.img ? [n, ...ps, row.dataset.img] : [n, ...ps];
+    }).filter(Boolean);
+    if (!items.length) throw new Error(`"${name || "Kategori " + (ci + 1)}" kategorisine en az bir ürün ekle.`);
+    return {name, cols, items};
+  });
+}
+
+function show(text, ok) { const m = $("#msg"); m.textContent = text; m.className = ok ? "ok" : "err"; }
+
+f.onsubmit = async e => {
+  e.preventDefault();
+  const btn = f.querySelector("button[type=submit]");
+  let body;
+  try {
+    body = {
+      name: f.elements.name.value, type: f.elements.type.value, map: f.elements.map.value.trim(),
+      featured: f.elements.featured.checked, note: f.note.value.trim(),
+      hours: f.noHours.checked ? null : `${f.open.value}-${f.close.value}`,
+      phone: toE164(f.phone.value), phoneText: f.phone.value.trim(),
+      cats: parseCats(),
+    };
+  } catch (err) { return show(err.message, false); }
+
+  btn.disabled = true;
+  const r = await api(editingId ? "PUT" : "POST", editingId, body);
+  btn.disabled = false;
+  if (!r.ok) return;
+  const saved = await r.json();
+  show(`✓ ${saved.name} ${editingId ? "güncellendi" : "eklendi"}. Ana sayfada görünüyor.`, true);
+  resetForm();
+  load();
+};
+// Stay logged in for this tab
+try { if (sessionStorage.adminPw) login(sessionStorage.adminPw).then(err => { if (err) logout(); }); } catch {}
+</script>
+</body>
+</html>
