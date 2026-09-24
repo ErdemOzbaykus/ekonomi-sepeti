@@ -216,9 +216,11 @@ $("#q").oninput = renderPlaces;
 // "3 hafta önce" → approx. days, so reviews can be sorted newest-first
 const UNIT = {dakika: 0, saat: 0, gün: 1, hafta: 7, ay: 30, yıl: 365};
 const ageDays = when => { const [, n, u] = /(\d+|bir)\s*(dakika|saat|gün|hafta|ay|yıl)/.exec(when) || []; return u ? (n === "bir" ? 1 : +n) * UNIT[u] : Infinity; };
-const googleHtml = g => `<summary>Google yorumları <span class="star">${g.rating ? `★ ${g.rating.toFixed(1)}` : ""}${g.count ? ` (${g.count})` : ""}</span></summary>
+// "maps/place/?q=place_id:X" isn't a documented Maps URL and often opens the wrong spot; use the official search form
+const mapsUrl = (url, name) => { const id = url.match(/place_id:([\w-]+)/)?.[1]; return id ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}&query_place_id=${id}` : url; };
+const googleHtml = (g, name) => `<summary>Google yorumları <span class="star">${g.rating ? `★ ${g.rating.toFixed(1)}` : ""}${g.count ? ` (${g.count})` : ""}</span></summary>
       <div class="reviews">${[...g.reviews].sort((a, b) => ageDays(a[2]) - ageDays(b[2])).map(([s, txt, when, who]) => `<div class="review"><small><span class="star">${"★".repeat(s)}</span>${"☆".repeat(5 - s)} · ${esc(when)}${who ? ` · ${esc(who)}` : ""}</small>${esc(txt)}</div>`).join("")}
-      <a class="gsrc" href="${esc(g.url)}" target="_blank" rel="noopener">Tüm yorumlar Google Haritalar'da →</a></div>`;
+      <a class="gsrc" href="${esc(mapsUrl(g.url, name))}" target="_blank" rel="noopener">Tüm yorumlar Google Haritalar'da →</a></div>`;
 
 function openPlace(id) {
   const m = DATA.mekanlar.find(x => x.id === id), q = norm($("#q").value.trim()), open = isOpen(m.hours);
@@ -229,9 +231,9 @@ function openPlace(id) {
       <button class="icon-btn close" aria-label="Kapat">✕</button>
       <div class="meta" style="margin-top:6px">${m.hours ? `<span class="status ${open ? "open" : "closed"}">${open ? "Açık" : "Kapalı"}</span>` : ""}<span>${esc(m.hours || "Saat bilinmiyor")}</span><span>· ${esc(m.type)}</span></div>
       ${m.note ? `<p class="note">${esc(m.note)}</p>` : ""}
-      <div class="actions">${m.phone ? `<a class="call" href="tel:${esc(m.phone)}">📞 Ara · ${esc(m.phoneText || m.phone)}</a>` : ""}<a href="${esc(m.google ? m.google.url : m.map || `https://www.google.com/maps/search/${encodeURIComponent(m.name + " Balçova İzmir")}`)}" target="_blank" rel="noopener">📍 Harita</a></div>
+      <div class="actions">${m.phone ? `<a class="call" href="tel:${esc(m.phone)}">📞 Ara · ${esc(m.phoneText || m.phone)}</a>` : ""}<a href="${esc(m.google ? mapsUrl(m.google.url, m.name) : m.map || `https://www.google.com/maps/search/${encodeURIComponent(m.name + " Balçova İzmir")}`)}" target="_blank" rel="noopener">📍 Harita</a></div>
     </div>
-    <div class="dbody">${m.google ? `<details open class="gdet">${googleHtml(m.google)}</details>` : ""}${m.cats.map((c, i) => {
+    <div class="dbody">${m.google ? `<details open class="gdet">${googleHtml(m.google, m.name)}</details>` : ""}${m.cats.map((c, i) => {
       const matched = q && c.items.some(it => norm(it[0]).includes(q));
       return `<details ${(i === 0 && !m.google) || matched ? "open" : ""}><summary>${esc(c.name)}</summary>
         <table><thead><tr><th>Ürün</th>${(c.cols || ["Fiyat"]).map(h => `<th>${esc(h)}</th>`).join("")}</tr></thead>
@@ -253,7 +255,7 @@ function openPlace(id) {
     if (!g?.reviews.length) return;
     m.google = g;
     const d = dlg.open && dlg.querySelector("#dlg-title").textContent === m.name && dlg.querySelector(".gdet");
-    if (d) d.innerHTML = googleHtml(g);
+    if (d) d.innerHTML = googleHtml(g, m.name);
   }).catch(() => {});
 }
 $("#dlg").onclick = e => { if (e.target === e.currentTarget) e.currentTarget.close(); }; // backdrop click
