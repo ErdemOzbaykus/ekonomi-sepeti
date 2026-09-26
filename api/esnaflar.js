@@ -41,12 +41,14 @@ async function write(request, id) {
     prev = await r.hget(KEY, id);
     if (!prev) return Response.json({ error: "Esnaf bulunamadı." }, { status: 404 });
   }
+  const payload = await request.json();
   try {
-    esnaf = validate(await request.json(), id);
+    esnaf = validate(payload, id);
   } catch (e) {
     return Response.json({ error: e.message || "Geçersiz istek." }, { status: 400 });
   }
-  if (prev?.google) esnaf.google = prev.google; // Google rating/reviews aren't editable in the panel; keep them
+  if (payload.google && typeof payload.google === "object") esnaf.google = payload.google;
+  else if (prev?.google) esnaf.google = prev.google;
   esnaf.color = prev?.color || COLORS[Math.floor(Math.random() * COLORS.length)];
   await r.hset(KEY, { [esnaf.id]: esnaf });
   return Response.json(esnaf, { status: id ? 200 : 201 });
@@ -57,8 +59,8 @@ const str = (v, field, max, { optional = false } = {}) => {
   if (typeof v !== "string" || !v.trim() || v.length > max) throw new Error(`${field} geçersiz (en fazla ${max} karakter).`);
   return v.trim();
 };
-// Only images uploaded through /api/upload (our Blob store) are accepted.
-const IMG = /^https:\/\/[a-z0-9]+\.public\.blob\.vercel-storage\.com\/resimler\/[\w-]+\.(webp|jpg|png)$/i;
+// Accepts images from Vercel Blob or local /uploads/
+const IMG = /^(https:\/\/[a-z0-9]+\.public\.blob\.vercel-storage\.com\/resimler\/[\w-]+\.(webp|jpg|png)|\/uploads\/[\w-]+\.(webp|jpg|png))$/i;
 const img = v => {
   if (v == null || v === "") return undefined;
   if (typeof v !== "string" || !IMG.test(v)) throw new Error("Resim linki geçersiz; resmi panelden yükleyin.");
@@ -77,7 +79,8 @@ export function validate(b, id = null) {
   const phone = str(b.phone, "Telefon", 20, { optional: true });
   if (phone && !/^\+?\d{7,15}$/.test(phone)) throw new Error("Telefon sadece rakam olmalı (ör. +905321234567).");
   const map = str(b.map, "Harita linki", 300, { optional: true });
-  if (map && !/^https:\/\/(maps\.app\.goo\.gl|goo\.gl\/maps|(www\.)?google\.[a-z.]+\/maps)\//.test(map)) throw new Error("Harita linki Google Haritalar linki olmalı.");
+  if (map && !/^https:\/\/(maps\.app\.goo\.gl\/|goo\.gl\/maps\/|(www\.)?google\.[a-z.]+\/maps|maps\.google\.[a-z.]+\/)/i.test(map)) throw new Error("Harita linki Google Haritalar linki olmalı.");
+  const distance = str(b.distance, "Mesafe", 40, { optional: true });
   if (!Array.isArray(b.cats) || b.cats.length > 20) throw new Error("En fazla 20 menü kategorisi olabilir.");
   const cats = b.cats.map(c => {
     const cols = c.cols == null ? ["Fiyat"] : c.cols;
@@ -103,6 +106,7 @@ export function validate(b, id = null) {
     ...(img(b.image) && { image: img(b.image) }),
     ...(b.featured === true && { featured: true }),
     hours,
+    ...(distance && { distance }),
     ...(phone && { phone, phoneText: str(b.phoneText, "Telefon yazımı", 25, { optional: true }) || phone }),
     ...(map && { map }),
     ...(b.note && { note: str(b.note, "Not", 300) }),

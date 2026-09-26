@@ -4,6 +4,7 @@ import { validate } from "./api/esnaflar.js";
 
 const ok = {
   name: "Bizim Kokoreç", type: "Kokoreç", map: "https://maps.app.goo.gl/abc123", hours: "12:00-02:00",
+  distance: "0.2 km",
   phone: "+905393299140", phoneText: "0539 329 91 40", color: "#fbd9c4", evil: "<script>",
   cats: [{ name: "Kokoreç", cols: ["Yarım", "Tam"], items: [["Kokoreç", 245, -1]] }, { name: "İçecek", cols: ["Fiyat"], items: [["Ayran", 40]] }],
 };
@@ -12,6 +13,7 @@ test("accepts a valid vendor and drops unknown fields", () => {
   const v = validate(ok);
   assert.match(v.id, /^bizim-kokorec-/);
   assert.equal(v.evil, undefined);
+  assert.equal(v.distance, "0.2 km");
   assert.deepEqual(v.cats[1], { name: "İçecek", items: [["Ayran", 40]] });
 });
 
@@ -58,3 +60,22 @@ test("maps a Places API response to our google shape, newest review first", asyn
   }, "https://fallback");
   assert.deepEqual(g, { rating: 4.4, count: 120, url: "https://fallback", reviews: [[5, "yeni", "3 gün önce", "B"], [3, "eski", "2 ay önce", "A"]] });
 });
+
+test("harita: parseCoordinates extracts coordinates and ignores 13.3km Izmir city center fallback", async () => {
+  const { parseCoordinates, calcDistance, isGenericCityCenter } = await import("./api/harita.js");
+
+  // Valid Google Maps place URL with @lat,lng (Pavo Coffee Co at Vali Hüseyin Öğütçen Cd.)
+  const coords1 = parseCoordinates("https://www.google.com/maps/place/Pavo+Coffee+Co/@38.3917,27.0360,17z");
+  assert.deepEqual(coords1, { lat: 38.3917, lng: 27.036 });
+  assert.equal(calcDistance(coords1.lat, coords1.lng), "1.1 km");
+
+  // Google Maps URL with !3d and !4d
+  const coords2 = parseCoordinates("https://www.google.com/maps/place/Data/!3d38.3894!4d27.0461");
+  assert.deepEqual(coords2, { lat: 38.3894, lng: 27.0461 });
+
+  // Generic Izmir center fallback from staticmap meta should be rejected
+  assert.equal(isGenericCityCenter(38.4401408, 27.148288), true);
+  const coordsFallback = parseCoordinates("https://www.google.com/maps/search/?api=1", `<meta content="https://maps.google.com/maps/api/staticmap?center=38.4401408%2C27.148288&zoom=14">`);
+  assert.deepEqual(coordsFallback, { lat: null, lng: null });
+});
+

@@ -1,6 +1,10 @@
 node_modules
 .vercel
 .env*
+!.env.example
+.DS_Store
+/data
+/dist
 
 # local AI-tool files, not part of the site
 .agents
