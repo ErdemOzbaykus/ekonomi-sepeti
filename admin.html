@@ -95,8 +95,15 @@ button.link{border:0;background:none;color:var(--no);padding:4px;font-weight:500
       <div class="grid">
         <label>İsim * <input name="name" required maxlength="80"></label>
         <label>Tür * <input name="type" required maxlength="40" list="turler" placeholder="Döner & Burger"></label>
+        <label>İEÜ'ye Mesafe <input name="distance" maxlength="40" placeholder="Ör. 0.1 km veya 5 km"></label>
         <label>Telefon <input name="phone" type="tel" placeholder="0532 123 45 67"></label>
-        <label>Harita linki <input name="map" type="url" placeholder="https://maps.app.goo.gl/…"></label>
+        <label style="grid-column:1/-1">Harita linki (Google Maps)
+          <div class="row">
+            <input name="map" type="url" placeholder="https://maps.app.goo.gl/… veya google.com/maps/place/…">
+            <button type="button" id="btnResolveMap" style="white-space:nowrap;padding:10px 14px">📍 Bilgileri Getir</button>
+          </div>
+          <small class="hint">Harita linkini yapıştırdığınızda İEÜ'ye mesafe ve Google bilgileri otomatik doldurulur.</small>
+        </label>
       </div>
       <datalist id="turler"></datalist>
       <div class="grid" style="margin-top:12px">
@@ -288,7 +295,7 @@ function renderList() {
   const q = $("#filter").value.trim().toLocaleLowerCase("tr-TR");
   $("#list").innerHTML = esnaflar.filter(m => m.name.toLocaleLowerCase("tr-TR").includes(q)).map(m => `
     <div class="item ${m.id === editingId ? "editing" : ""}" data-id="${esc(m.id)}">
-      <span>${m.featured ? `<span class="star-tag" title="Öne çıkan">⭐</span> ` : ""}${esc(m.name)} <small>· ${esc(m.type)}</small></span>
+      <span>${m.featured ? `<span class="star-tag" title="Öne çıkan">⭐</span> ` : ""}${esc(m.name)} <small>· ${esc(m.type)}${m.distance ? ` · 📍 ${esc(m.distance)}` : ""}</small></span>
       <button type="button" data-act="edit">Düzenle</button>
       <button type="button" data-act="del" class="link">Sil</button>
     </div>`).join("") || `<p class="hint">Esnaf bulunamadı.</p>`;
@@ -306,10 +313,18 @@ $("#list").onclick = async e => {
   }
 };
 
+const mapsUrl = (url, name) => {
+  const id = url.match(/place_id:([\w-]+)/)?.[1];
+  return id ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}&query_place_id=${id}` : url;
+};
+
 function fill(m) {
   editingId = m.id;
+  resolvedGoogle = m.google || null;
   const el = f.elements;
-  el.name.value = m.name; el.type.value = m.type; el.map.value = m.map || "";
+  el.name.value = m.name; el.type.value = m.type;
+  el.map.value = m.map || (m.google?.url ? mapsUrl(m.google.url, m.name) : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(m.name + " Balçova İzmir")}`);
+  el.distance.value = m.distance || "";
   el.phone.value = m.phoneText || m.phone || ""; el.featured.checked = !!m.featured; setCover(m.image || "");
   el.note.value = m.note || "";
   el.noHours.checked = !m.hours;
@@ -330,6 +345,7 @@ function fill(m) {
 
 function resetForm() {
   editingId = null;
+  resolvedGoogle = null;
   f.reset(); setCover(""); $("#cats").innerHTML = ""; addCat();
   f.open.disabled = f.close.disabled = false;
   $("#formTitle").textContent = "Yeni esnaf";
@@ -337,6 +353,57 @@ function resetForm() {
   renderList();
 }
 $("#cancel").onclick = resetForm;
+
+let resolvedGoogle = null;
+
+async function resolveMap() {
+  const url = f.elements.map.value.trim();
+  if (!url) return show("Lütfen önce bir harita linki yapıştırın.", false);
+  const btn = $("#btnResolveMap");
+  btn.disabled = true;
+  btn.textContent = "⏳ Getiriliyor…";
+  try {
+    const r = await fetch("/api/harita?url=" + encodeURIComponent(url), {
+      headers: { Authorization: "Bearer " + pw }
+    });
+    const data = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(data.error || "Harita bilgileri çözülemedi.");
+
+    let msgs = [];
+    if (data.distance) {
+      f.elements.distance.value = data.distance;
+      msgs.push(`Mesafe: ${data.distance}`);
+    }
+    if (data.url && data.url !== url) {
+      f.elements.map.value = data.url;
+    }
+    if (data.google) {
+      resolvedGoogle = data.google;
+      msgs.push(`Google yorumları bağlandı (${data.google.rating ? "★ " + data.google.rating : "Puan hazır"})`);
+    }
+    if (data.name && !f.elements.name.value.trim()) {
+      f.elements.name.value = data.name;
+      msgs.push(`İsim: ${data.name}`);
+    }
+    if (data.phone && !f.elements.phone.value.trim()) {
+      f.elements.phone.value = data.phone;
+      msgs.push(`Telefon: ${data.phone}`);
+    }
+
+    if (msgs.length) {
+      show(`✓ Otomatik dolduruldu: ${msgs.join(" · ")}`, true);
+    } else {
+      show("Harita linki okundu ancak konum koordinatı (@lat,lng) bulunamadı. Mesafeyi elle girebilir veya @koordinat içeren harita linki yapıştırabilirsiniz.", false);
+    }
+  } catch (err) {
+    show(err.message || "Harita çözümlenemedi.", false);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "📍 Bilgileri Getir";
+  }
+}
+$("#btnResolveMap").onclick = resolveMap;
+f.elements.map.onpaste = () => setTimeout(resolveMap, 150);
 
 async function api(method, id, body) {
   try {
@@ -387,11 +454,13 @@ f.onsubmit = async e => {
   try {
     body = {
       name: f.elements.name.value, type: f.elements.type.value, map: f.elements.map.value.trim(),
+      distance: f.elements.distance.value.trim(),
       image: f.elements.image.value, featured: f.elements.featured.checked, note: f.note.value.trim(),
       hours: f.noHours.checked ? null : `${f.open.value}-${f.close.value}`,
       phone: toE164(f.phone.value), phoneText: f.phone.value.trim(),
       cats: parseCats(),
     };
+    if (resolvedGoogle) body.google = resolvedGoogle;
   } catch (err) { return show(err.message, false); }
 
   btn.disabled = true;

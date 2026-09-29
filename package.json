@@ -2,11 +2,22 @@
   "name": "ekonomi-sepeti",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
+    "dev": "NODE_ENV=development node --watch server.js",
+    "build": "node scripts/build.js",
+    "start": "node server.js",
     "test": "node --test"
   },
   "dependencies": {
     "@upstash/redis": "^1.35.0",
-    "@vercel/blob": "^2.8.0"
+    "@vercel/blob": "^2.8.0",
+    "compression": "^1.8.2",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "html-minifier-terser": "^7.2.0"
   }
 }

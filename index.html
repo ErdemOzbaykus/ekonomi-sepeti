@@ -177,8 +177,17 @@ function isOpen(hours, now = new Date()) {
 
 /* ---------- mekanlar ---------- */
 let filter = "Tümü";
+const distKm = d => {
+  if (d == null || d === "") return Infinity;
+  if (typeof d === "number") return d >= 100 ? d / 1000 : d;
+  const num = parseFloat(String(d).replace(",", "."));
+  if (isNaN(num)) return Infinity;
+  if (/m(etre)?$/i.test(String(d).trim()) && !/km$/i.test(String(d).trim())) return num / 1000;
+  return num;
+};
+
 function renderChips() {
-  const FILTERS = ["Tümü", "Şu an açık", ...new Set(DATA.mekanlar.map(m => m.type))];
+  const FILTERS = ["Tümü", "En Yakın", "Şu an açık", ...new Set(DATA.mekanlar.map(m => m.type))];
   $("#chips").innerHTML = FILTERS.map(f => `<button aria-pressed="${f === filter}">${esc(f)}</button>`).join("");
 }
 $("#chips").onclick = e => {
@@ -195,20 +204,28 @@ const itemHits = (m, q) => q ? m.cats.flatMap(c => c.items.filter(i => norm(i[0]
 
 function renderPlaces() {
   const q = norm($("#q").value.trim());
+  const isNearest = filter === "En Yakın";
   const list = DATA.mekanlar
-    .filter(m => filter === "Tümü" || (filter === "Şu an açık" ? isOpen(m.hours) : m.type === filter))
+    .filter(m => filter === "Tümü" || isNearest || (filter === "Şu an açık" ? isOpen(m.hours) : m.type === filter))
     .map(m => ({m, hits: itemHits(m, q), nameHit: !q || norm(m.name).includes(q)}))
     .filter(x => x.nameHit || x.hits.length)
-    .sort((a, b) => !!b.m.featured - !!a.m.featured || isOpen(b.m.hours) - isOpen(a.m.hours));
+    .sort((a, b) => {
+      if (isNearest) {
+        return distKm(a.m.distance) - distKm(b.m.distance) || isOpen(b.m.hours) - isOpen(a.m.hours);
+      }
+      return !!b.m.featured - !!a.m.featured || isOpen(b.m.hours) - isOpen(a.m.hours);
+    });
   const openCount = DATA.mekanlar.filter(m => isOpen(m.hours)).length;
-  $("#pl-sub").textContent = `${openCount} / ${DATA.mekanlar.length} esnaf şu an açık`;
+  $("#pl-sub").textContent = isNearest
+    ? `İEÜ'ye en yakından uzağa · ${openCount} esnaf açık`
+    : `${openCount} / ${DATA.mekanlar.length} esnaf şu an açık`;
   $("#grid").innerHTML = list.length ? list.map(({m, hits}, i) => {
     const open = isOpen(m.hours);
     return `<button class="card" data-id="${esc(m.id)}" style="--c:${esc(m.color)};animation-delay:${i * 40}ms">
       <div class="cover" aria-hidden="true">${m.image ? `<img src="${esc(m.image)}" alt="" loading="lazy">` : ""}</div>
       <div class="body">
         <h3>${esc(m.name)}</h3>
-        <div class="meta">${m.hours ? `<span class="status ${open ? "open" : "closed"}">${open ? "Açık" : "Kapalı"}</span>` : ""}<span>${esc(m.hours || "Saat bilinmiyor")}</span><span>· ${esc(m.type)}</span>${m.google?.rating ? `<span class="star">★ ${m.google.rating.toFixed(1)}</span>` : ""}</div>
+        <div class="meta">${m.hours ? `<span class="status ${open ? "open" : "closed"}">${open ? "Açık" : "Kapalı"}</span>` : ""}<span>${esc(m.hours || "Saat bilinmiyor")}</span><span>· ${esc(m.type)}</span>${m.distance ? `<span class="dist">· 📍 ${esc(m.distance)}</span>` : ""}${m.google?.rating ? `<span class="star">★ ${m.google.rating.toFixed(1)}</span>` : ""}</div>
         ${hits.length ? `<div class="hit">${hits.length} ürün eşleşti: ${esc(hits.slice(0, 2).map(h => h[0]).join(", "))}</div>` : ""}
       </div></button>`;
   }).join("") : `<div class="empty">“${esc($("#q").value)}” için sonuç yok.</div>`;
@@ -232,7 +249,7 @@ function openPlace(id) {
     <div class="dhead">
       <h2 id="dlg-title">${esc(m.name)}</h2>
       <button class="icon-btn close" aria-label="Kapat">✕</button>
-      <div class="meta" style="margin-top:6px">${m.hours ? `<span class="status ${open ? "open" : "closed"}">${open ? "Açık" : "Kapalı"}</span>` : ""}<span>${esc(m.hours || "Saat bilinmiyor")}</span><span>· ${esc(m.type)}</span></div>
+      <div class="meta" style="margin-top:6px">${m.hours ? `<span class="status ${open ? "open" : "closed"}">${open ? "Açık" : "Kapalı"}</span>` : ""}<span>${esc(m.hours || "Saat bilinmiyor")}</span><span>· ${esc(m.type)}</span>${m.distance ? `<span class="dist">· 📍 İEÜ'ye ${esc(m.distance)}</span>` : ""}</div>
       ${m.note ? `<p class="note">${esc(m.note)}</p>` : ""}
       <div class="actions">${m.phone ? `<a class="call" href="tel:${esc(m.phone)}">📞 Ara · ${esc(m.phoneText || m.phone)}</a>` : ""}<a href="${esc(m.google ? mapsUrl(m.google.url, m.name) : m.map || `https://www.google.com/maps/search/${encodeURIComponent(m.name + " Balçova İzmir")}`)}" target="_blank" rel="noopener">📍 Harita</a></div>
     </div>
