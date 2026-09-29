@@ -150,7 +150,9 @@
      ]
     ]
    }
-  ]
+  ],
+  "distance": "0.1 km",
+  "map": "https://www.google.com/maps/place/Battalzade/@38.3894,27.0461,17z"
  },
  {
   "id": "komagene",
@@ -239,7 +241,9 @@
      ]
     ]
    }
-  ]
+  ],
+  "distance": "0.2 km",
+  "map": "https://www.google.com/maps/place/Komagene/@38.3896,27.0463,17z"
  },
  {
   "id": "bufe-bambam",
@@ -337,7 +341,9 @@
      ]
     ]
    }
-  ]
+  ],
+  "distance": "0.7 km",
+  "map": "https://www.google.com/maps/place/B%C3%BCfe+Bambam/@38.3925,27.0498,17z"
  },
  {
   "id": "burger-republic",
@@ -560,7 +566,9 @@
      ]
     ]
    }
-  ]
+  ],
+  "distance": "0.4 km",
+  "map": "https://www.google.com/maps/place/Burger+Republic/@38.3910,27.0480,17z"
  },
  {
   "id": "chef-pilav",
@@ -610,7 +618,9 @@
      ]
     ]
    }
-  ]
+  ],
+  "distance": "0.1 km",
+  "map": "https://www.google.com/maps/place/Chef+Pilav/@38.3887,27.0452,17z"
  },
  {
   "id": "cafe-bambam",
@@ -787,7 +797,9 @@
      ]
     ]
    }
-  ]
+  ],
+  "distance": "0.2 km",
+  "map": "https://www.google.com/maps/place/Cafe+Bambam/@38.3898,27.0465,17z"
  },
  {
   "id": "akyuz-doner",
@@ -969,7 +981,9 @@
      ]
     ]
    }
-  ]
+  ],
+  "distance": "0.3 km",
+  "map": "https://www.google.com/maps/place/Aky%C3%BCz+D%C3%B6ner/@38.3900,27.0467,17z"
  },
  {
   "id": "gusto",
@@ -1175,7 +1189,9 @@
      ]
     ]
    }
-  ]
+  ],
+  "distance": "0.5 km",
+  "map": "https://www.google.com/maps/place/Gusto+Makarna+%26+Salata/@38.3912,27.0482,17z"
  },
  {
   "id": "sosyete",
@@ -1284,7 +1300,9 @@
      ]
     ]
    }
-  ]
+  ],
+  "distance": "0.1 km",
+  "map": "https://www.google.com/maps/place/Sosyete+Tavuk+D%C3%BCr%C3%BCm/@38.3889,27.0453,17z"
  },
  {
   "id": "munzur-tavuk",
@@ -1421,7 +1439,9 @@
      ]
     ]
    }
-  ]
+  ],
+  "distance": "0.5 km",
+  "map": "https://www.google.com/maps/place/Munzur+Tavuk/@38.3914,27.0485,17z"
  },
  {
   "id": "vip-mutfak",
@@ -1571,7 +1591,9 @@
      ]
     ]
    }
-  ]
+  ],
+  "distance": "0.8 km",
+  "map": "https://www.google.com/maps/place/Vip+Mutfak+Ev+Yemekleri/@38.3928,27.0502,17z"
  },
  {
   "id": "korele",
@@ -1778,7 +1800,9 @@
      ]
     ]
    }
-  ]
+  ],
+  "distance": "0.3 km",
+  "map": "https://www.google.com/maps/place/Korele/@38.3902,27.0469,17z"
  },
  {
   "id": "bizim-kokorec",
@@ -1811,7 +1835,9 @@
   "color": "#e6e8bf",
   "hours": null,
   "note": "Menüsü internette yok. Kokoreç, Ödemiş köfte (pişmiş veya çiğ) ve tavuk sote var; fiyat için arayın.",
-  "cats": []
+  "cats": [],
+  "distance": "0.3 km",
+  "map": "https://www.google.com/maps/place/Bizim+Kokore%C3%A7/@38.3903,27.0470,17z"
  },
  {
   "id": "yummy-waffle",
@@ -1927,7 +1953,9 @@
      ]
     ]
    }
-  ]
+  ],
+  "distance": "0.5 km",
+  "map": "https://www.google.com/maps/place/Yummy+Waffle/@38.3915,27.0486,17z"
  },
  {
   "id": "adil-muftuoglu",
@@ -2200,7 +2228,9 @@
      ]
     ]
    }
-  ]
+  ],
+  "distance": "1.1 km",
+  "map": "https://www.google.com/maps/place/Adil+M%C3%BCft%C3%BCo%C4%9Flu+U%C4%9Fur+Lokantas%C4%B1/@38.3908,27.0545,17z"
  },
  {
   "id": "mamosa",
@@ -2503,7 +2533,9 @@
      ]
     ]
    }
-  ]
+  ],
+  "distance": "0.1 km",
+  "map": "https://www.google.com/maps/place/Mamosa/@38.3888,27.0454,17z"
  },
  {
   "id": "tezgahtar",
@@ -2621,7 +2653,9 @@
      ]
     ]
    }
-  ]
+  ],
+  "distance": "0.6 km",
+  "map": "https://www.google.com/maps/place/Tezgahtar/@38.3920,27.0491,17z"
  },
  {
   "id": "pavo",
@@ -2790,7 +2824,9 @@
      ]
     ]
    }
-  ]
+  ],
+  "distance": "1.1 km",
+  "map": "https://www.google.com/maps/place/Pavo+Coffee+Co/@38.3917,27.0360,17z"
  },
  {
   "id": "ozsut",
@@ -2930,6 +2966,8 @@
      ]
     ]
    }
-  ]
+  ],
+  "distance": "1.1 km",
+  "map": "https://www.google.com/maps/place/%C3%96zs%C3%BCt/@38.3942,27.0375,17z"
  }
 ]
